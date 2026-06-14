@@ -1,0 +1,57 @@
+export const siteConfig = {
+  name: "Asta Tengen",
+  tagline: "Website untuk bisnis yang ingin terlihat serius.",
+  description:
+    "Asta Tengen merancang dan membangun website yang rapi, cepat, dan mudah digunakan untuk usaha lokal, profesional, dan bisnis yang sedang tumbuh.",
+  location: "Semarang, Jawa Tengah, Indonesia",
+  email: "ggbanget2023@gmail.com",
+  whatsappDisplay: "+62 878-1627-0140",
+  whatsappNumber: "6287816270140",
+  hours:
+    "WhatsApp menerima pesan selama 24 jam. Pesan ditangani berdasarkan antrean dan ketersediaan tim.",
+  founders: [
+    {
+      name: "Achmad Roychan",
+      role: "Pendiri / Web Designer & Frontend",
+      image: "/media/people/roychan.jpeg",
+      alt: "Potret Achmad Roychan, pendiri Asta Tengen.",
+      note: "Berfokus pada arah visual, struktur halaman, dan pengalaman antarmuka.",
+    },
+    {
+      name: "Aditya Sendy Ardiansyah",
+      role: "Pendiri / Website & Implementation",
+      image: "/media/people/aditya.jpeg",
+      alt: "Potret Aditya Sendy Ardiansyah, pendiri Asta Tengen.",
+      note: "Berfokus pada implementasi, detail teknis, dan kesiapan peluncuran.",
+    },
+  ],
+};
+
+export const mainNav = [
+  { href: "/proyek", label: "Proyek" },
+  { href: "/layanan", label: "Layanan" },
+  { href: "/proses", label: "Proses" },
+  { href: "/harga", label: "Harga" },
+  { href: "/tentang", label: "Tentang" },
+  { href: "/kontak", label: "Kontak" },
+];
+
+export const publicRoutes = [
+  "/",
+  "/layanan",
+  "/harga",
+  "/proses",
+  "/proyek",
+  "/tentang",
+  "/kontak",
+  "/kebijakan-privasi",
+  "/syarat-layanan",
+];
+
+export function getWhatsAppUrl(message?: string) {
+  const text =
+    message ??
+    "Halo Asta Tengen, saya ingin konsultasi tentang kebutuhan website untuk bisnis saya.";
+
+  return `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(text)}`;
+}

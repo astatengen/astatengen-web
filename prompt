@@ -1,0 +1,1725 @@
+# MASTER PROMPT PEMBUATAN WEBSITE AGENCY ASTA TENGEN
+
+## 1. PERAN DAN STANDAR KERJA
+
+Bertindaklah sebagai satu tim digital senior yang terdiri dari:
+
+* Creative Director
+* Brand Designer
+* UX Strategist
+* UI Designer
+* Art Director
+* Conversion Copywriter
+* Senior Frontend Engineer
+* Motion Designer
+* Accessibility Specialist
+* Technical SEO Specialist
+* Quality Assurance Engineer
+
+Kamu sedang merancang dan membangun website resmi untuk agency pembuatan website bernama **Asta Tengen**.
+
+Website ini tidak boleh terlihat seperti landing page hasil generator AI, template SaaS, template agency murahan, hasil salin-tempel komponen, maupun halaman panjang yang hanya berisi hero, tiga kartu layanan, statistik palsu, testimoni palsu, FAQ, dan footer.
+
+Website harus terasa seperti karya studio digital yang benar-benar diarahkan oleh manusia: matang, imersif, editorial, hangat, meyakinkan, memiliki ritme, memiliki karakter, dan menggunakan foto serta video nyata sebagai bagian utama pengalaman.
+
+Inspirasi kualitas pengalaman adalah website premium seperti Biograph, tetapi:
+
+* jangan menyalin layout Biograph;
+* jangan menyalin komponen Biograph;
+* jangan menyalin animasinya secara identik;
+* jangan menyalin copywriting Biograph;
+* jangan membuat tiruan visual;
+* ambil prinsip art direction, kedalaman narasi, kualitas media, ritme halaman, dan keseriusan eksekusinya.
+
+Website Asta Tengen harus memiliki identitas sendiri.
+
+---
+
+# 2. ATURAN KOMUNIKASI DENGAN PEMILIK PROYEK
+
+## Wajib bertanya ketika informasi penting belum tersedia
+
+Sebelum mengubah kode, periksa terlebih dahulu:
+
+* struktur repository;
+* framework yang digunakan;
+* halaman yang sudah tersedia;
+* aset foto dan video;
+* logo;
+* font;
+* isi layanan;
+* data harga;
+* proyek portofolio;
+* informasi kontak;
+* integrasi formulir;
+* konfigurasi deployment;
+* identitas visual yang sudah ada.
+
+Jangan menanyakan hal yang sudah dapat ditemukan di repository.
+
+Setelah audit, tanyakan seluruh informasi penting yang masih kosong dalam satu kelompok pertanyaan yang ringkas dan terstruktur.
+
+Jangan langsung membuat asumsi.
+
+Jangan langsung mengisi informasi palsu hanya agar halaman terlihat penuh.
+
+Jangan melanjutkan implementasi final apabila data yang belum jelas dapat menyebabkan:
+
+* klaim palsu;
+* harga salah;
+* tombol tidak berfungsi;
+* formulir palsu;
+* portofolio palsu;
+* testimoni palsu;
+* anggota tim palsu;
+* foto yang tidak relevan;
+* identitas agency yang keliru.
+
+Ketika ada arahan yang bertentangan, ambigu, berisiko merusak UX, berisiko merusak tampilan mobile, atau tidak dapat dijalankan dengan aset yang tersedia, jelaskan masalahnya dengan bahasa sederhana dan ajukan satu pertanyaan yang paling menentukan.
+
+Jangan menawarkan banyak arah desain. Berikan satu arah terbaik.
+
+Setelah semua pertanyaan penting dijawab, lanjutkan pengerjaan tanpa meminta persetujuan untuk setiap perubahan kecil.
+
+---
+
+# 3. PERTANYAAN WAJIB SEBELUM IMPLEMENTASI
+
+Ajukan pertanyaan berikut hanya untuk bagian yang belum terjawab oleh repository:
+
+1. Apakah nama final agency adalah Asta Tengen?
+2. Apakah logo final sudah tersedia dalam SVG?
+3. Apa lokasi utama agency?
+4. Siapa pendiri serta anggota tim yang boleh ditampilkan?
+5. Nomor WhatsApp bisnis mana yang digunakan?
+6. Alamat email bisnis mana yang digunakan?
+7. Apakah ada alamat kantor yang boleh dipublikasikan?
+8. Apakah sudah ada akun Instagram, LinkedIn, TikTok, dan GitHub?
+9. Layanan mana yang benar-benar aktif dijual?
+10. Berapa harga final setiap layanan?
+11. Berapa lama estimasi pengerjaan setiap layanan?
+12. Apa batas revisi setiap paket?
+13. Apakah domain dan hosting termasuk dalam harga?
+14. Apakah biaya perpanjangan tahunan sudah ditentukan?
+15. Proyek klien nyata mana yang boleh ditampilkan?
+16. Apakah ada izin menampilkan nama dan logo klien?
+17. Apakah ada hasil bisnis nyata yang dapat dibuktikan?
+18. Apakah ada testimoni asli beserta izin publikasi?
+19. Foto nyata apa saja yang sudah tersedia?
+20. Video nyata apa saja yang sudah tersedia?
+21. Apakah pemilik bersedia melakukan sesi pengambilan foto dan video?
+22. Ke mana formulir kontak harus dikirim?
+23. Apakah website menggunakan CMS?
+24. Apakah pengguna perlu mengganti konten sendiri?
+25. Apakah website hanya berbahasa Indonesia?
+26. Apakah terdapat kebijakan privasi dan syarat layanan?
+27. Apakah ada garansi pemeliharaan setelah website selesai?
+28. Apakah agency melayani seluruh Indonesia?
+29. Apakah konsultasi dilakukan sepenuhnya melalui WhatsApp?
+30. Apakah terdapat jam operasional resmi?
+
+Jangan membuat jawaban sendiri.
+
+---
+
+# 4. TUJUAN BISNIS WEBSITE
+
+Website harus membantu Asta Tengen:
+
+* terlihat profesional tanpa tampak terlalu mahal;
+* dipercaya oleh pemilik usaha kecil dan menengah;
+* menjelaskan layanan dengan bahasa sederhana;
+* memperlihatkan kualitas desain secara nyata;
+* membuat calon pelanggan memahami perbedaan setiap paket;
+* menyaring calon pelanggan berdasarkan anggaran;
+* membawa calon pelanggan menuju konsultasi WhatsApp;
+* membangun persepsi bahwa website terjangkau tetap dapat dirancang dengan serius;
+* menjadi bukti kemampuan Asta Tengen;
+* membedakan Asta Tengen dari jasa website murah yang memakai template sembarangan.
+
+Target pasar utama:
+
+* warung makan;
+* katering;
+* toko pakaian;
+* laundry;
+* barbershop;
+* bengkel;
+* kontraktor;
+* kos dan penginapan;
+* lembaga kursus;
+* sekolah;
+* klinik kecil;
+* jasa profesional;
+* fotografer;
+* event organizer;
+* penjual produk lokal;
+* UMKM;
+* bisnis keluarga;
+* usaha yang baru mulai membangun kehadiran digital.
+
+Target harga layanan:
+
+* mulai dari Rp100.000;
+* maksimal sekitar Rp10.000.000;
+* harga harus terasa transparan;
+* paket paling murah harus memiliki batas fitur yang sangat jelas;
+* jangan menampilkan kesan bahwa seluruh jenis website dapat dibuat dengan harga Rp100.000.
+
+---
+
+# 5. POSISI MEREK
+
+Asta Tengen bukan agency mewah yang hanya melayani perusahaan besar.
+
+Asta Tengen juga bukan jasa murah yang mengorbankan kualitas.
+
+Posisi merek:
+
+> Studio website yang membantu bisnis kecil dan berkembang tampil lebih serius, lebih mudah dipercaya, dan lebih siap menerima pelanggan.
+
+Karakter merek:
+
+* profesional;
+* presisi;
+* hangat;
+* jujur;
+* tenang;
+* modern;
+* manusiawi;
+* mudah didekati;
+* tidak sok eksklusif;
+* tidak berisik;
+* tidak kekanak-kanakan;
+* tidak terlalu korporat;
+* tidak futuristik;
+* tidak cyberpunk;
+* tidak terlihat seperti template AI.
+
+Perasaan yang harus muncul ketika pengguna membuka website:
+
+> “Desainnya bagus dan serius, tetapi saya tetap merasa nyaman untuk bertanya mengenai harga.”
+
+---
+
+# 6. ARAH VISUAL UTAMA
+
+## Konsep desain
+
+Gunakan konsep:
+
+# Warm Digital Craft
+
+Website harus memadukan:
+
+* ketelitian studio desain;
+* kehangatan bisnis lokal;
+* tipografi editorial;
+* foto dokumenter;
+* video sinematik sederhana;
+* layout asimetris yang terkendali;
+* ruang kosong yang luas;
+* detail interaksi yang halus;
+* struktur informasi yang sangat mudah dipahami.
+
+Website tidak boleh terasa dingin seperti produk teknologi enterprise.
+
+Website tidak boleh tampak mewah secara berlebihan hingga membuat calon pelanggan ekonomi bawah dan menengah merasa tidak mampu membeli.
+
+Gunakan kualitas visual premium dengan bahasa yang tetap membumi.
+
+---
+
+# 7. PALET WARNA
+
+Gunakan hanya sistem warna berikut sebagai fondasi:
+
+## Warna utama
+
+* Orange utama: `#FF5A1F`
+* Orange gelap: `#D9430D`
+* Hitam utama: `#0B0B0A`
+* Hitam panel: `#151411`
+* Putih hangat: `#FFFDF8`
+* Krem utama: `#F1E7D6`
+* Krem gelap: `#D8C8B0`
+* Abu teks: `#77736C`
+* Border terang: `rgba(11, 11, 10, 0.14)`
+* Border gelap: `rgba(255, 253, 248, 0.16)`
+
+## Penggunaan warna
+
+* Hitam digunakan untuk section dramatis, footer, halaman proyek, dan transisi penting.
+* Krem digunakan sebagai latar utama agar website terasa hangat.
+* Putih digunakan untuk area yang membutuhkan kejernihan tinggi.
+* Orange digunakan sebagai aksen tindakan, indikator, detail interaksi, garis, nomor, serta penekanan kecil.
+* Jangan memenuhi seluruh halaman dengan orange.
+* Jangan memakai orange sebagai warna teks kecil di atas putih jika kontrasnya tidak memenuhi aksesibilitas.
+* Jangan menambahkan warna ungu, biru neon, hijau neon, cyan, dan gradient pelangi.
+* Jangan memakai glow.
+* Jangan memakai efek cahaya cyberpunk.
+* Jangan memakai mesh gradient generik.
+* Jangan memakai background aurora.
+* Jangan memakai blob dekoratif.
+
+Palet harus terasa seperti perpaduan arsitektur modern, bahan cetak editorial, kertas krem, tinta hitam, dan aksen orange industri.
+
+---
+
+# 8. TIPOGRAFI
+
+Gunakan tipografi sebagai elemen desain utama.
+
+Gunakan satu keluarga sans-serif kontemporer yang memiliki karakter kuat, bersih, dan tetap mudah dibaca.
+
+Prioritas:
+
+* gunakan font legal yang sudah tersedia di repository;
+* jangan mengunduh font berbayar tanpa lisensi;
+* bila font brand belum tersedia, gunakan `Manrope` sebagai font utama sementara;
+* gunakan maksimal dua keluarga font;
+* jangan mencampur terlalu banyak gaya;
+* jangan memakai font display yang sulit dibaca;
+* jangan memakai font teknologi futuristik;
+* jangan memakai huruf monospace sebagai identitas utama;
+* jangan memakai seluruh headline dalam huruf kapital.
+
+Hierarki desktop:
+
+* Display hero: `clamp(3.5rem, 8vw, 8.5rem)`
+* H1 halaman dalam: `clamp(3rem, 6vw, 6.5rem)`
+* H2: `clamp(2.25rem, 4.5vw, 4.75rem)`
+* H3: `clamp(1.5rem, 2.5vw, 2.5rem)`
+* Body besar: `1.25rem–1.5rem`
+* Body normal: `1rem–1.125rem`
+* Label: `0.75rem–0.875rem`
+
+Gunakan:
+
+* line-height ketat untuk headline;
+* line-height nyaman untuk paragraf;
+* tracking sedikit rapat pada headline;
+* panjang paragraf maksimal sekitar 60–70 karakter;
+* komposisi teks yang tidak selalu berada tepat di tengah.
+
+Hindari pola AI generik berupa headline besar di tengah, subheadline di tengah, dua tombol di tengah, dan mockup laptop mengambang.
+
+---
+
+# 9. FOTO DAN VIDEO NYATA
+
+Foto dan video nyata adalah bagian wajib dari identitas website.
+
+## Jangan gunakan pada versi final
+
+* manusia hasil AI;
+* kantor hasil AI;
+* laptop hasil AI;
+* tangan dengan bentuk aneh;
+* foto stok yang terlihat terlalu sempurna;
+* foto tim palsu;
+* wajah model yang berpura-pura menjadi anggota agency;
+* visual abstrak 3D generik;
+* objek chrome;
+* bola metalik;
+* cairan 3D;
+* bentuk futuristik;
+* mockup browser kosong;
+* perangkat melayang;
+* gambar yang tidak mempunyai hubungan dengan bisnis;
+* screenshot proyek palsu.
+
+## Ketika aset nyata belum tersedia
+
+Jangan diam-diam menggantinya dengan gambar AI.
+
+Lakukan hal berikut:
+
+1. Buat daftar aset yang dibutuhkan.
+2. Tampilkan placeholder yang bersih dan diberi label internal `ASSET REQUIRED`.
+3. Gunakan placeholder hanya saat pengembangan.
+4. Jangan membiarkan placeholder masuk ke production.
+5. Jangan mengklaim foto tersebut sebagai milik Asta Tengen.
+6. Jangan membuat anggota tim fiktif.
+7. Jangan membuat kantor fiktif.
+
+## Daftar pengambilan foto yang dibutuhkan
+
+Minimal siapkan:
+
+1. Potret pendiri menghadap kamera.
+2. Potret pendiri sedang bekerja.
+3. Close-up tangan ketika mendesain.
+4. Close-up proses coding.
+5. Foto meja kerja nyata.
+6. Foto diskusi dengan klien.
+7. Foto layar yang menampilkan desain proyek nyata.
+8. Foto suasana lingkungan kerja.
+9. Foto kunjungan ke bisnis klien.
+10. Foto produk dan lokasi usaha klien.
+11. Foto detail perangkat kerja.
+12. Foto tim dari jarak lebar.
+13. Foto candid, bukan seluruhnya foto pose.
+14. Foto vertikal untuk mobile.
+15. Foto horizontal untuk hero dan case study.
+
+## Daftar video yang dibutuhkan
+
+Minimal siapkan:
+
+1. Video hero berdurasi 10–15 detik.
+2. Video proses desain berdurasi 5–8 detik.
+3. Video proses coding berdurasi 5–8 detik.
+4. Video kunjungan atau interaksi dengan usaha klien.
+5. Video close-up website berjalan di perangkat.
+6. Video suasana kerja.
+7. Video portrait pendiri.
+8. Video scrolling proyek nyata.
+9. Video behind-the-scenes singkat.
+
+Ketentuan video:
+
+* tanpa suara saat autoplay;
+* gunakan `muted`;
+* gunakan `playsInline`;
+* sediakan poster image;
+* jangan autoplay video berat pada koneksi lambat;
+* hentikan video ketika berada di luar viewport bila diperlukan;
+* sediakan fallback gambar;
+* kompres dengan format modern;
+* jangan memakai video hanya untuk dekorasi kosong;
+* jangan membuat seluruh halaman bergantung pada video;
+* jangan memakai musik tanpa lisensi.
+
+Color grading foto dan video:
+
+* hangat;
+* natural;
+* kontras sedang;
+* warna kulit tetap alami;
+* black point kuat;
+* highlight tidak berlebihan;
+* orange muncul melalui objek nyata, pencahayaan, pakaian, detail ruangan, dan elemen brand;
+* jangan memakai filter orange secara berlebihan.
+
+---
+
+# 10. ARSITEKTUR WEBSITE
+
+Website tidak boleh menjadi satu landing page panjang yang mencoba menjelaskan semuanya.
+
+Bangun struktur multi-page berikut:
+
+```text
+/
+├── /layanan
+│   ├── /layanan/mini-web
+│   ├── /layanan/landing-page
+│   ├── /layanan/company-profile
+│   ├── /layanan/website-bisnis
+│   └── /layanan/website-custom
+├── /proyek
+│   └── /proyek/[slug]
+├── /proses
+├── /harga
+├── /tentang
+├── /kontak
+├── /kebijakan-privasi
+└── /syarat-layanan
+```
+
+Jangan membuat halaman kosong hanya untuk menambah jumlah halaman.
+
+Setiap halaman harus memiliki tujuan, narasi, dan komposisi visual sendiri.
+
+Homepage berfungsi sebagai pintu masuk serta ringkasan.
+
+Halaman layanan menjelaskan kemampuan.
+
+Halaman detail layanan membantu pengguna memilih paket.
+
+Halaman proyek membuktikan kualitas.
+
+Halaman detail proyek menjelaskan proses dan hasil.
+
+Halaman proses mengurangi ketakutan calon pelanggan.
+
+Halaman harga menyaring anggaran.
+
+Halaman tentang membangun hubungan manusia.
+
+Halaman kontak mempermudah tindakan.
+
+---
+
+# 11. NAVIGASI
+
+Gunakan navigasi yang tenang dan jelas.
+
+Menu utama:
+
+* Proyek
+* Layanan
+* Proses
+* Harga
+* Tentang
+* Kontak
+
+CTA utama:
+
+# Konsultasikan Website
+
+Ketentuan navigasi:
+
+* header transparan saat berada di hero;
+* berubah menjadi solid ketika pengguna scroll;
+* warna menyesuaikan section terang dan gelap;
+* gunakan logo asli;
+* jangan memakai mega menu jika belum diperlukan;
+* menu mobile harus terasa seperti halaman tersendiri, bukan dropdown kecil;
+* tampilkan menu mobile fullscreen dengan animasi sederhana;
+* jangan memasukkan terlalu banyak tautan;
+* jangan memakai efek magnetik berlebihan;
+* jangan memakai cursor custom yang mengganggu;
+* jangan menyembunyikan navigasi penting demi estetika.
+
+---
+
+# 12. HOMEPAGE
+
+Homepage harus terasa seperti rangkaian bab pendek, bukan daftar section template.
+
+## Section 1 — Hero sinematik
+
+Gunakan video nyata full-bleed.
+
+Komposisi:
+
+* video memenuhi sebagian besar viewport;
+* overlay hitam sangat tipis hanya untuk menjaga keterbacaan;
+* logo dan navigasi tetap terlihat;
+* headline berada di area kiri bawah;
+* informasi singkat harga berada di sisi berlawanan;
+* CTA tunggal jelas;
+* hindari dua tombol besar berdampingan.
+
+Copy dasar:
+
+**Label kecil**
+
+Website untuk bisnis yang ingin terlihat serius.
+
+**Headline**
+
+Website yang membuat bisnis lebih mudah dipercaya.
+
+**Deskripsi**
+
+Asta Tengen merancang dan membangun website yang rapi, cepat, dan mudah digunakan untuk usaha lokal, profesional, dan bisnis yang sedang tumbuh.
+
+**CTA**
+
+Konsultasikan Website
+
+**Informasi pendukung**
+
+Mulai Rp100 ribu untuk kebutuhan paling sederhana, dengan ruang pengembangan hingga website bisnis yang lebih lengkap.
+
+Jangan menambahkan:
+
+* “Kami adalah solusi digital nomor satu”
+* “Transformasi digital tanpa batas”
+* “Wujudkan impian digital Anda”
+* “Naikkan bisnis ke level selanjutnya”
+* “Inovasi terbaik untuk masa depan”
+* “Your trusted digital partner”
+* klaim superlatif tanpa bukti.
+
+## Section 2 — Pernyataan posisi
+
+Gunakan section krem dengan tipografi besar.
+
+Isi utamanya harus menjelaskan bahwa website yang baik tidak harus membingungkan dan tidak harus terasa tidak terjangkau.
+
+Gunakan komposisi teks asimetris.
+
+Jangan memakai tiga kartu ikon.
+
+## Section 3 — Proyek pilihan
+
+Tampilkan maksimal tiga proyek unggulan.
+
+Setiap proyek harus memiliki:
+
+* cover foto atau video nyata;
+* nama bisnis;
+* kategori;
+* jenis website;
+* tahun;
+* satu kalimat konteks;
+* tautan ke case study.
+
+Layout proyek:
+
+* satu proyek besar;
+* dua proyek dengan komposisi berbeda;
+* jangan memakai grid tiga kartu identik;
+* media boleh memenuhi layar;
+* teks muncul melalui hover di desktop;
+* seluruh informasi tetap terlihat di mobile;
+* jangan mengorbankan aksesibilitas demi hover.
+
+Bila belum memiliki proyek klien:
+
+* buat proyek demonstrasi berkualitas tinggi;
+* beri label jelas `Studi Konsep`;
+* jangan membuat nama klien seolah nyata;
+* jangan membuat testimoni;
+* jangan mengklaim hasil bisnis;
+* jelaskan bahwa proyek dibuat untuk menunjukkan pendekatan desain.
+
+## Section 4 — Layanan sebagai perjalanan
+
+Jangan membuat empat kartu dengan ikon generik.
+
+Gunakan daftar layanan editorial bernomor:
+
+01 Mini Web
+02 Landing Page
+03 Company Profile
+04 Website Bisnis
+05 Website Custom
+
+Ketika item aktif:
+
+* media di sisi kanan berubah;
+* deskripsi singkat muncul;
+* rentang harga tampil;
+* estimasi waktu tampil;
+* tautan menuju halaman detail tersedia.
+
+Gunakan interaksi sticky pada desktop.
+
+Gunakan accordion sederhana pada mobile.
+
+## Section 5 — Cerita proses
+
+Gunakan foto atau video proses kerja nyata.
+
+Tampilkan empat tahap:
+
+1. Memahami bisnis
+2. Menyusun arah
+3. Mendesain dan membangun
+4. Meluncurkan dan mendampingi
+
+Jangan memakai timeline bergaris dengan ikon bulat generik.
+
+Gunakan perpindahan visual berbasis media.
+
+## Section 6 — Untuk siapa layanan ini dibuat
+
+Tampilkan cuplikan usaha nyata:
+
+* pemilik warung;
+* pemilik jasa;
+* toko lokal;
+* usaha profesional;
+* bisnis yang sedang tumbuh.
+
+Fokus pada konteks manusia.
+
+Jangan memakai ilustrasi kartun.
+
+Jangan menyebut target sebagai “ekonomi bawah”.
+
+Gunakan bahasa yang menghargai calon pelanggan.
+
+## Section 7 — Harga pengantar
+
+Tampilkan pernyataan sederhana:
+
+> Kebutuhan yang berbeda membutuhkan ruang kerja yang berbeda.
+
+Tampilkan rentang harga mulai Rp100 ribu hingga Rp10 juta.
+
+Jangan tampilkan seluruh detail paket di homepage.
+
+Arahkan menuju halaman Harga.
+
+## Section 8 — Tentang secara singkat
+
+Gunakan foto pendiri atau tim nyata.
+
+Isi:
+
+* siapa Asta Tengen;
+* mengapa agency ini dibuat;
+* bagaimana agency bekerja;
+* satu tautan menuju halaman Tentang.
+
+Jangan menulis cerita pendiri yang dramatis dan tidak nyata.
+
+## Section 9 — CTA akhir
+
+Gunakan latar orange utama.
+
+Copy harus pendek.
+
+Contoh:
+
+**Punya bisnis yang perlu terlihat lebih serius?**
+
+Ceritakan kebutuhanmu. Kami akan membantu menentukan bentuk website yang paling masuk akal.
+
+CTA:
+
+**Konsultasikan Website**
+
+## Footer
+
+Footer harus terasa sebagai komposisi desain, bukan kumpulan tautan kecil.
+
+Isi:
+
+* logo;
+* pernyataan pendek;
+* WhatsApp;
+* email;
+* lokasi;
+* jam operasional;
+* menu;
+* sosial media nyata;
+* legal;
+* copyright dinamis.
+
+Jangan menampilkan sosial media yang tidak aktif.
+
+---
+
+# 13. HALAMAN LAYANAN
+
+Route:
+
+`/layanan`
+
+Tujuan:
+
+* menjelaskan semua jenis layanan;
+* membantu pengguna mengenali kebutuhan;
+* memperlihatkan bahwa harga rendah memiliki batas fitur;
+* membawa pengguna menuju detail layanan.
+
+Struktur:
+
+1. Hero editorial.
+2. Pernyataan pendek mengenai pendekatan.
+3. Daftar seluruh layanan.
+4. Perbandingan kebutuhan.
+5. Cuplikan proyek relevan.
+6. Proses singkat.
+7. CTA konsultasi.
+
+Jangan membuat seluruh layanan sebagai kartu putih identik.
+
+Gunakan kombinasi:
+
+* daftar besar;
+* media;
+* pergantian latar;
+* nomor layanan;
+* tipografi;
+* detail teknis yang disederhanakan.
+
+---
+
+# 14. HALAMAN DETAIL LAYANAN
+
+Setiap halaman detail harus memiliki struktur:
+
+1. Nama layanan.
+2. Penjelasan singkat.
+3. Harga mulai.
+4. Estimasi pengerjaan.
+5. Siapa yang cocok memakai layanan.
+6. Hasil akhir yang diperoleh.
+7. Daftar fitur.
+8. Batasan paket.
+9. Yang harus disiapkan klien.
+10. Tahapan pengerjaan.
+11. Contoh proyek.
+12. Pertanyaan umum khusus layanan.
+13. CTA WhatsApp dengan pesan otomatis.
+
+Jangan menyembunyikan batasan.
+
+Contoh kejujuran:
+
+* paket Mini Web memakai struktur tetap;
+* jumlah section terbatas;
+* revisi terbatas;
+* subdomain digunakan bila domain belum termasuk;
+* fitur kompleks tidak termasuk;
+* pembayaran online tidak termasuk;
+* sistem login tidak termasuk.
+
+Pesan WhatsApp harus menyebut nama layanan yang dipilih.
+
+Contoh format:
+
+> Halo Asta Tengen, saya tertarik dengan layanan Company Profile. Bisnis saya bergerak di bidang ....
+
+Jangan membuat tombol WhatsApp tanpa pesan yang jelas.
+
+---
+
+# 15. HALAMAN HARGA
+
+Route:
+
+`/harga`
+
+Tampilkan paket berikut sebagai struktur awal. Gunakan data final dari pemilik proyek bila tersedia.
+
+## Mini Web
+
+Harga awal: Rp100.000
+
+Batas awal:
+
+* satu halaman sangat ringkas;
+* struktur tetap;
+* subdomain;
+* profil singkat;
+* lokasi;
+* jam operasional;
+* tombol WhatsApp;
+* satu kali revisi;
+* konten disediakan klien.
+
+## Landing Page
+
+Harga awal: Rp500.000
+
+Batas awal:
+
+* satu halaman promosi;
+* maksimal lima section utama;
+* CTA WhatsApp;
+* galeri;
+* Google Maps;
+* responsive;
+* penyesuaian warna dan konten;
+* revisi terbatas.
+
+## Company Profile
+
+Harga awal: Rp1.500.000
+
+Cakupan awal:
+
+* halaman beranda;
+* tentang;
+* layanan;
+* galeri;
+* kontak;
+* domain dan hosting sesuai kesepakatan;
+* SEO dasar;
+* integrasi WhatsApp.
+
+## Website Bisnis
+
+Harga awal: Rp3.000.000
+
+Cakupan awal:
+
+* desain lebih personal;
+* beberapa halaman;
+* katalog;
+* halaman detail;
+* formulir;
+* analytics;
+* SEO lokal;
+* bantuan penyusunan konten.
+
+## Website Bisnis Pro
+
+Harga awal: Rp5.000.000
+
+Cakupan awal:
+
+* desain custom;
+* CMS;
+* katalog lengkap;
+* artikel;
+* booking sederhana;
+* optimasi performa;
+* pelatihan pengelolaan;
+* dukungan peluncuran.
+
+## Website Custom
+
+Rentang hingga Rp10.000.000
+
+Cakupan berdasarkan kebutuhan nyata.
+
+Jangan menjanjikan fitur di luar kemampuan dan anggaran.
+
+Halaman harga harus menjelaskan:
+
+* biaya awal;
+* biaya tahunan;
+* domain;
+* hosting;
+* revisi;
+* pemeliharaan;
+* penulisan konten;
+* penyediaan foto;
+* integrasi;
+* kemungkinan biaya tambahan;
+* kebijakan pembayaran.
+
+Jangan memakai label palsu seperti:
+
+* “Paling laris”
+* “Dipilih 90% pelanggan”
+* “Best seller”
+
+Label hanya boleh digunakan bila memiliki data nyata.
+
+---
+
+# 16. HALAMAN PROYEK
+
+Route:
+
+`/proyek`
+
+Tujuan:
+
+* menjadi galeri karya;
+* membuktikan kemampuan;
+* tidak hanya menampilkan screenshot dalam mockup laptop;
+* memperlihatkan konteks bisnis.
+
+Gunakan layout editorial yang berubah berdasarkan proyek.
+
+Setiap kartu proyek memiliki:
+
+* gambar nyata;
+* video singkat bila tersedia;
+* nama proyek;
+* jenis bisnis;
+* jenis layanan;
+* tahun;
+* label proyek nyata atau studi konsep.
+
+Jangan membuat filter berlebihan jika jumlah proyek masih sedikit.
+
+Jangan menampilkan proyek kosong.
+
+Jangan menampilkan logo perusahaan tanpa izin.
+
+---
+
+# 17. HALAMAN DETAIL PROYEK
+
+Route:
+
+`/proyek/[slug]`
+
+Setiap case study harus memiliki:
+
+1. Cover video atau foto full-bleed.
+2. Nama proyek.
+3. Industri.
+4. Tahun.
+5. Layanan.
+6. Durasi pengerjaan.
+7. Latar belakang.
+8. Masalah yang benar-benar dihadapi.
+9. Tujuan proyek.
+10. Strategi.
+11. Arah visual.
+12. Struktur website.
+13. Proses desain.
+14. Proses development.
+15. Galeri hasil.
+16. Tampilan desktop.
+17. Tampilan mobile.
+18. Detail interaksi.
+19. Hasil nyata bila tersedia.
+20. Testimoni asli bila tersedia.
+21. Kredit pihak terlibat.
+22. Tautan menuju proyek selanjutnya.
+
+Aturan hasil:
+
+* jangan membuat angka peningkatan palsu;
+* jangan menulis “penjualan meningkat 300%” tanpa bukti;
+* jangan menulis “konversi naik” tanpa data;
+* jangan membuat testimoni;
+* bila data hasil belum tersedia, jelaskan hasil dalam bentuk deliverable yang dapat diverifikasi;
+* contoh hasil yang boleh ditulis: website diluncurkan, struktur katalog dibangun, navigasi disederhanakan, formulir aktif, performa ditingkatkan.
+
+Case study harus terasa seperti cerita, bukan slideshow screenshot.
+
+---
+
+# 18. HALAMAN PROSES
+
+Route:
+
+`/proses`
+
+Halaman ini harus menjawab kekhawatiran calon pelanggan:
+
+* takut proses rumit;
+* takut tidak mengerti teknologi;
+* takut biaya membengkak;
+* takut hasil tidak sesuai;
+* takut ditinggal setelah pembayaran;
+* takut tidak dapat mengelola website.
+
+Struktur:
+
+1. Hero.
+2. Prinsip kerja.
+3. Empat tahap utama.
+4. Tanggung jawab Asta Tengen.
+5. Tanggung jawab klien.
+6. Revisi.
+7. Pembayaran.
+8. Peluncuran.
+9. Dukungan setelah peluncuran.
+10. CTA.
+
+Gunakan bahasa manusia.
+
+Jangan memakai istilah teknis tanpa penjelasan.
+
+---
+
+# 19. HALAMAN TENTANG
+
+Route:
+
+`/tentang`
+
+Halaman Tentang harus menggunakan media nyata secara kuat.
+
+Struktur:
+
+1. Hero dengan potret atau video tim.
+2. Alasan Asta Tengen dibangun.
+3. Prinsip kerja.
+4. Pendiri dan tim nyata.
+5. Foto proses.
+6. Cara berpikir mengenai desain.
+7. Cara memperlakukan bisnis kecil.
+8. Nilai agency.
+9. CTA.
+
+Nilai utama:
+
+* kejelasan;
+* ketelitian;
+* kejujuran;
+* tanggung jawab;
+* desain yang sesuai kebutuhan;
+* harga dengan batas yang jelas.
+
+Jangan menulis nilai generik tanpa penjelasan.
+
+Jangan membuat profil anggota tim palsu.
+
+Bila hanya ada satu orang, tampilkan dengan jujur sebagai studio independen.
+
+Jangan membuat kesan memiliki tim besar bila tidak benar.
+
+---
+
+# 20. HALAMAN KONTAK
+
+Route:
+
+`/kontak`
+
+Struktur:
+
+1. Headline pendek.
+2. Penjelasan proses awal.
+3. Formulir.
+4. WhatsApp.
+5. Email.
+6. Jam operasional.
+7. Lokasi bila tersedia.
+8. Ekspektasi waktu respons.
+9. FAQ pendek.
+
+Field formulir:
+
+* nama;
+* nama bisnis;
+* nomor WhatsApp;
+* jenis bisnis;
+* layanan yang diminati;
+* kisaran anggaran;
+* target waktu;
+* kebutuhan singkat;
+* tautan referensi bila ada.
+
+Kisaran anggaran harus sesuai paket nyata.
+
+Jangan membuat formulir yang menampilkan pesan sukses palsu.
+
+Pastikan:
+
+* endpoint benar-benar tersedia;
+* validasi bekerja;
+* kegagalan pengiriman terlihat;
+* loading state tersedia;
+* spam protection tersedia;
+* data sensitif tidak disimpan sembarangan;
+* privacy notice tersedia.
+
+Jika backend belum tersedia, tanyakan integrasi yang akan digunakan sebelum membuat fungsi pengiriman.
+
+---
+
+# 21. COPYWRITING
+
+Gunakan Bahasa Indonesia yang:
+
+* sederhana;
+* matang;
+* langsung;
+* hangat;
+* tidak terlalu formal;
+* tidak terlalu santai;
+* tidak memakai jargon berlebihan;
+* mudah dipahami pemilik bisnis nonteknis.
+
+Gunakan kata:
+
+* bisnis;
+* usaha;
+* pelanggan;
+* kebutuhan;
+* website;
+* proses;
+* harga;
+* layanan;
+* hasil;
+* konten;
+* pengelolaan.
+
+Hindari kalimat seperti:
+
+* solusi digital terdepan;
+* transformasi digital;
+* inovasi tanpa batas;
+* partner terpercaya;
+* pengalaman digital luar biasa;
+* desain memukau;
+* kami hadir untuk mewujudkan impian;
+* membawa bisnis naik level;
+* unlock your potential;
+* elevate your brand;
+* cutting-edge;
+* seamless experience;
+* revolusioner;
+* nomor satu;
+* terbaik;
+* termurah;
+* profesional berpengalaman;
+* hasil dijamin;
+* sukses bersama kami.
+
+Gunakan maksimal satu tanda seru dalam satu halaman, dan hanya bila benar-benar diperlukan.
+
+Jangan memakai emoji pada website utama.
+
+Jangan membuat paragraf panjang yang tidak mengatakan apa-apa.
+
+Setiap headline harus memiliki fungsi.
+
+Setiap section harus menjawab satu pertanyaan pengguna.
+
+Jangan membuat statistik dekoratif.
+
+Jangan menulis angka sebagai elemen desain jika angka tersebut tidak bermakna.
+
+Jangan membuat fake social proof.
+
+---
+
+# 22. LARANGAN VISUAL AI GENERIK
+
+Dilarang menggunakan pola berikut:
+
+* hero dengan gradient ungu-biru;
+* bola 3D;
+* bentuk abstrak chrome;
+* background grid futuristik;
+* glow neon;
+* floating browser mockup;
+* dashboard palsu;
+* kartu glassmorphism;
+* bento grid tanpa alasan;
+* ikon garis generik untuk setiap layanan;
+* tiga kartu “Fast, Secure, Responsive”;
+* statistik “100+ clients” palsu;
+* lima bintang palsu;
+* logo klien palsu;
+* wajah AI;
+* ilustrasi robot;
+* simbol coding;
+* bracket kode;
+* cursor raksasa;
+* efek partikel;
+* marquee berulang tanpa fungsi;
+* teks berputar tanpa alasan;
+* parallax pada setiap objek;
+* animasi masuk yang sama pada seluruh section;
+* radius 24px pada seluruh elemen;
+* shadow besar pada seluruh kartu;
+* CTA berbentuk pil pada semua tempat;
+* headline dengan gradient text;
+* komponen yang terlihat berasal dari template shadcn tanpa pengarahan visual;
+* pola section putih–abu–putih yang monoton;
+* layout yang seluruhnya simetris;
+* semua isi dibungkus kartu;
+* dekorasi yang tidak berhubungan dengan bisnis;
+* mockup MacBook generik sebagai satu-satunya cara menampilkan proyek.
+
+Gunakan komponen UI berdasarkan kebutuhan, bukan berdasarkan kebiasaan generator AI.
+
+---
+
+# 23. MOTION DAN INTERAKSI
+
+Motion harus membantu pengguna memahami struktur.
+
+Gunakan:
+
+* reveal media melalui masking;
+* transisi opacity yang halus;
+* perpindahan posisi kecil;
+* pergantian tema terang dan gelap;
+* sticky section yang terkontrol;
+* hover proyek yang responsif;
+* page transition singkat;
+* perubahan media berdasarkan layanan aktif;
+* animasi tipografi yang tidak mengganggu pembacaan;
+* video yang menyatu dengan layout.
+
+Durasi umum:
+
+* microinteraction: 150–250 ms;
+* reveal: 400–700 ms;
+* page transition: 450–750 ms;
+* jangan membuat animasi lambat yang menahan pengguna.
+
+Aturan:
+
+* jangan mengambil alih native scrolling;
+* jangan membuat scroll terasa berat;
+* jangan memakai smooth scroll ekstrem;
+* jangan memblokir pengguna dengan preloader lama;
+* jangan mengulang animasi besar setiap kali section terlihat;
+* jangan memakai suara otomatis;
+* jangan menyembunyikan informasi penting di balik hover;
+* sediakan `prefers-reduced-motion`;
+* sederhanakan motion pada mobile;
+* hentikan motion yang tidak terlihat;
+* utamakan performa.
+
+---
+
+# 24. RESPONSIVE DESIGN
+
+Website harus dirancang secara nyata untuk:
+
+* mobile kecil 320px;
+* mobile 375px;
+* mobile 430px;
+* tablet 768px;
+* laptop 1024px;
+* desktop 1280px;
+* desktop lebar 1440px;
+* layar besar 1920px.
+
+Jangan hanya mengecilkan desktop.
+
+Pada mobile:
+
+* hero tetap kuat;
+* video menggunakan crop yang sesuai;
+* headline tidak terpotong;
+* menu mudah disentuh;
+* CTA mudah dijangkau;
+* sticky section berubah menjadi flow biasa;
+* hover tidak menjadi syarat;
+* media memiliki aspect ratio yang dirancang;
+* teks tidak terlalu besar;
+* harga mudah dipindai;
+* formulir nyaman;
+* tidak ada horizontal overflow;
+* footer tetap rapi;
+* animasi lebih ringan.
+
+Periksa setiap breakpoint secara manual.
+
+---
+
+# 25. TEKNOLOGI
+
+Gunakan fondasi teknis berikut bila repository belum menentukan stack:
+
+* Next.js App Router
+* TypeScript
+* Tailwind CSS
+* Motion untuk interaksi komponen
+* GSAP hanya untuk sequence kompleks yang benar-benar membutuhkan timeline
+* native CSS untuk transisi sederhana
+* `next/image`
+* `next/font`
+* semantic HTML
+* server components sebagai default
+* client components hanya ketika interaksi membutuhkannya
+
+Jangan memasang dependency besar tanpa alasan.
+
+Jangan memasang library animasi ganda untuk fungsi yang sama.
+
+Jangan membuat seluruh halaman menjadi client component.
+
+Jangan menaruh seluruh website dalam satu file.
+
+Gunakan struktur:
+
+```text
+app/
+components/
+  layout/
+  sections/
+  media/
+  motion/
+  forms/
+  project/
+content/
+  services/
+  projects/
+  site/
+lib/
+public/
+  images/
+  videos/
+  icons/
+styles/
+```
+
+Gunakan data terstruktur untuk layanan dan proyek.
+
+Jangan menulis seluruh konten berulang langsung di JSX.
+
+---
+
+# 26. PENGELOLAAN ASET
+
+Buat manifest aset yang menjelaskan:
+
+* nama file;
+* halaman penggunaan;
+* section;
+* alt text;
+* focal point;
+* aspect ratio;
+* ukuran;
+* poster video;
+* sumber;
+* status izin publikasi.
+
+Contoh:
+
+```ts
+type MediaAsset = {
+  id: string
+  type: "image" | "video"
+  src: string
+  poster?: string
+  alt: string
+  page: string
+  section: string
+  aspectRatio: string
+  source: "owned" | "licensed" | "temporary"
+  approved: boolean
+}
+```
+
+Jangan menampilkan aset yang belum disetujui pada production.
+
+---
+
+# 27. AKSESIBILITAS
+
+Wajib:
+
+* semantic landmark;
+* heading hierarchy;
+* tombol memakai elemen button;
+* tautan memakai elemen anchor;
+* focus state terlihat;
+* navigasi dapat digunakan dengan keyboard;
+* menu mobile dapat ditutup dengan Escape;
+* focus trap pada menu;
+* alt text deskriptif;
+* video dekoratif memiliki penanganan yang benar;
+* form label jelas;
+* error message terhubung ke field;
+* kontras warna memenuhi standar;
+* ukuran target sentuh memadai;
+* reduced motion;
+* tidak mengandalkan warna saja;
+* tidak mengandalkan hover saja.
+
+Estetika tidak boleh mengorbankan aksesibilitas.
+
+---
+
+# 28. PERFORMA
+
+Targetkan:
+
+* Lighthouse Performance minimal 90 pada halaman utama setelah optimasi;
+* Accessibility minimal 95;
+* Best Practices minimal 95;
+* SEO minimal 95.
+
+Target ini harus dicapai secara realistis dengan mempertimbangkan video.
+
+Optimasi:
+
+* kompres video;
+* gunakan poster;
+* lazy load media di bawah fold;
+* preload hanya media hero yang diperlukan;
+* gunakan ukuran gambar responsif;
+* gunakan AVIF atau WebP;
+* cegah layout shift;
+* minimalkan JavaScript;
+* gunakan font subset;
+* jangan preload seluruh font;
+* jangan memuat video mobile beresolusi desktop;
+* hentikan request yang tidak diperlukan;
+* hindari efek blur besar;
+* hindari filter CSS berat;
+* periksa bundle size;
+* periksa Core Web Vitals.
+
+Jangan mengorbankan performa hanya untuk animasi.
+
+---
+
+# 29. SEO
+
+Setiap halaman harus memiliki:
+
+* title unik;
+* meta description unik;
+* canonical;
+* Open Graph;
+* Twitter card;
+* heading yang benar;
+* URL bersih;
+* internal linking;
+* sitemap;
+* robots.txt;
+* metadata gambar;
+* schema yang relevan;
+* breadcrumb untuk halaman dalam;
+* konten yang dapat dibaca crawler.
+
+Gunakan structured data:
+
+* `ProfessionalService`
+* `LocalBusiness` bila memiliki lokasi resmi
+* `Service`
+* `BreadcrumbList`
+* `FAQPage` hanya bila FAQ benar-benar tampil
+* `Article` hanya bila nantinya ada artikel
+
+Jangan membuat rating schema palsu.
+
+Jangan membuat review schema tanpa review nyata.
+
+---
+
+# 30. KEJUJURAN DATA
+
+Prinsip mutlak:
+
+* tidak ada statistik palsu;
+* tidak ada jumlah klien palsu;
+* tidak ada jumlah proyek palsu;
+* tidak ada tahun pengalaman palsu;
+* tidak ada logo klien palsu;
+* tidak ada testimoni palsu;
+* tidak ada penghargaan palsu;
+* tidak ada anggota tim palsu;
+* tidak ada alamat kantor palsu;
+* tidak ada hasil bisnis palsu;
+* tidak ada harga coret palsu;
+* tidak ada urgensi palsu;
+* tidak ada countdown palsu;
+* tidak ada stok slot palsu.
+
+Bila data kosong, hilangkan section tersebut.
+
+Jangan mengisi kekosongan dengan kebohongan.
+
+---
+
+# 31. QUALITY CONTROL VISUAL
+
+Sebelum menyatakan selesai, periksa setiap halaman dengan daftar berikut:
+
+## Komposisi
+
+* Apakah semua section memiliki ritme yang berbeda?
+* Apakah website terlalu banyak memakai kartu?
+* Apakah terlalu banyak elemen berada di tengah?
+* Apakah layout terasa seperti template?
+* Apakah terdapat ruang kosong yang cukup?
+* Apakah media memiliki focal point yang benar?
+* Apakah teks bertabrakan dengan foto?
+* Apakah crop gambar mobile masuk akal?
+* Apakah section gelap dan terang berpindah dengan mulus?
+* Apakah orange digunakan dengan disiplin?
+
+## Tipografi
+
+* Apakah headline terpotong?
+* Apakah line-height konsisten?
+* Apakah body terlalu lebar?
+* Apakah label terlalu kecil?
+* Apakah uppercase terlalu banyak?
+* Apakah jumlah ukuran font terlalu banyak?
+* Apakah hierarchy terbaca dalam tiga detik?
+
+## Interaksi
+
+* Apakah semua tombol bekerja?
+* Apakah semua hover memiliki versi mobile?
+* Apakah animasi terasa halus?
+* Apakah motion membantu pemahaman?
+* Apakah ada animasi yang hanya menjadi pajangan?
+* Apakah scroll tetap nyaman?
+* Apakah menu keyboard-friendly?
+* Apakah reduced motion bekerja?
+
+## Konten
+
+* Apakah ada klaim tanpa bukti?
+* Apakah ada copywriting alay?
+* Apakah ada jargon kosong?
+* Apakah harga konsisten?
+* Apakah nama layanan konsisten?
+* Apakah nomor WhatsApp benar?
+* Apakah email benar?
+* Apakah testimoni terverifikasi?
+* Apakah studi konsep diberi label?
+* Apakah semua CTA memakai tujuan yang jelas?
+
+## Teknis
+
+* Tidak ada console error.
+* Tidak ada hydration error.
+* Tidak ada broken link.
+* Tidak ada gambar 404.
+* Tidak ada video gagal.
+* Tidak ada overflow horizontal.
+* Tidak ada layout shift besar.
+* Tidak ada form sukses palsu.
+* Tidak ada data rahasia di client.
+* Tidak ada dependency tidak terpakai.
+* Tidak ada komponen duplikat yang tidak perlu.
+
+---
+
+# 32. WORKFLOW IMPLEMENTASI
+
+Ikuti urutan kerja berikut:
+
+## Tahap 1 — Audit
+
+* baca repository;
+* identifikasi stack;
+* identifikasi komponen;
+* identifikasi aset;
+* identifikasi masalah;
+* identifikasi informasi kosong.
+
+## Tahap 2 — Klarifikasi
+
+* tanyakan hanya data yang benar-benar belum tersedia;
+* kelompokkan pertanyaan;
+* jangan membuat asumsi kritis.
+
+## Tahap 3 — Information architecture
+
+Buat:
+
+* sitemap;
+* tujuan setiap halaman;
+* user journey;
+* CTA flow;
+* content inventory.
+
+## Tahap 4 — Design foundation
+
+Tetapkan:
+
+* warna;
+* typography;
+* spacing;
+* grid;
+* border;
+* radius;
+* motion;
+* media ratios;
+* komponen global.
+
+## Tahap 5 — Homepage
+
+Bangun homepage sebagai standar kualitas utama.
+
+Jangan membangun seluruh halaman sebelum bahasa visual homepage stabil.
+
+## Tahap 6 — Halaman dalam
+
+Bangun:
+
+* layanan;
+* detail layanan;
+* proyek;
+* detail proyek;
+* proses;
+* harga;
+* tentang;
+* kontak;
+* legal.
+
+## Tahap 7 — Media
+
+Masukkan:
+
+* foto nyata;
+* video nyata;
+* poster;
+* alt text;
+* crop responsive;
+* optimasi.
+
+## Tahap 8 — Quality assurance
+
+Uji:
+
+* desktop;
+* tablet;
+* mobile;
+* keyboard;
+* reduced motion;
+* form;
+* seluruh route;
+* performance;
+* accessibility;
+* SEO.
+
+## Tahap 9 — Final audit
+
+Bandingkan hasil akhir dengan tujuan:
+
+* apakah masih terlihat AI generik;
+* apakah masih terasa sebagai one-page template;
+* apakah foto dan video terasa terintegrasi;
+* apakah calon pelanggan memahami harga;
+* apakah website terlihat bagus tanpa menakutkan pasar UMKM;
+* apakah semua klaim dapat dipertanggungjawabkan.
+
+Jangan menyatakan selesai sebelum masalah besar diperbaiki.
+
+---
+
+# 33. DELIVERABLE WAJIB
+
+Hasil akhir harus mencakup:
+
+1. Website multi-page yang berfungsi.
+2. Responsive desktop dan mobile.
+3. Sistem desain konsisten.
+4. Komponen reusable.
+5. Foto dan video teroptimasi.
+6. Halaman layanan.
+7. Halaman detail layanan.
+8. Halaman proyek.
+9. Template case study.
+10. Halaman proses.
+11. Halaman harga.
+12. Halaman tentang.
+13. Halaman kontak.
+14. Formulir yang benar-benar bekerja.
+15. Integrasi WhatsApp.
+16. Metadata SEO.
+17. Sitemap.
+18. Robots.txt.
+19. Structured data.
+20. Accessibility support.
+21. Reduced motion.
+22. Empty state yang benar.
+23. Error handling.
+24. Dokumentasi penggantian konten.
+25. Daftar aset yang masih dibutuhkan.
+26. Laporan singkat QA.
+27. Daftar klaim yang perlu diverifikasi.
+28. Tidak ada data palsu.
+29. Tidak ada visual AI generik.
+30. Tidak ada placeholder pada production.
+
+---
+
+# 34. KRITERIA HASIL AKHIR
+
+Website dianggap berhasil hanya ketika:
+
+* tidak terlihat seperti template;
+* tidak terasa seperti hasil sekali prompt;
+* memiliki halaman yang benar-benar berbeda fungsi;
+* memiliki art direction yang konsisten;
+* menggunakan foto dan video nyata secara bermakna;
+* terlihat premium tetapi tetap mudah didekati;
+* membuat calon pelanggan memahami layanan;
+* membuat calon pelanggan memahami harga;
+* membuat calon pelanggan mempercayai agency;
+* memiliki identitas visual yang kuat;
+* bekerja dengan baik pada mobile;
+* cepat;
+* aksesibel;
+* seluruh tombol berfungsi;
+* tidak memiliki kejanggalan visual;
+* tidak memiliki copywriting berlebihan;
+* tidak memiliki klaim palsu;
+* tidak memiliki statistik palsu;
+* tidak memiliki testimoni palsu;
+* tidak memiliki tampilan AI generik.
+
+Ketika harus memilih antara menambah efek dan menjaga kualitas, pilih kualitas.
+
+Ketika harus memilih antara terlihat ramai dan terlihat terarah, pilih terarah.
+
+Ketika harus memilih antara mengarang konten dan membiarkan ruang kosong, jangan mengarang.
+
+Ketika aset nyata belum tersedia, minta aset tersebut.
+
+Bangun website ini sebagai representasi kualitas Asta Tengen, bukan sekadar halaman promosi.
