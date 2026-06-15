@@ -12,7 +12,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Proyek",
-  description: "Portofolio proyek live Asta Tengen, termasuk Ruang Rapi sebagai proyek internal untuk website jasa lokal.",
+  description: "Portofolio proyek live Asta Tengen untuk usaha jasa lokal, kuliner, dan bisnis kecil yang membutuhkan website rapi.",
   path: "/proyek",
 });
 
@@ -35,8 +35,8 @@ export default function ProjectsPage() {
         <p className="eyebrow">Proyek</p>
         <h1>Proyek live yang bisa dinilai langsung.</h1>
         <p>
-          Ruang Rapi adalah proyek internal Asta Tengen untuk memperlihatkan bagaimana website jasa lokal dapat disusun dengan informasi
-          yang jelas, visual bersih, dan jalur WhatsApp yang mudah ditemukan.
+          Beberapa proyek live Asta Tengen memperlihatkan bagaimana website usaha lokal dapat disusun dengan informasi yang jelas, visual
+          yang sesuai konteks bisnis, dan jalur WhatsApp yang mudah ditemukan.
         </p>
       </section>
 

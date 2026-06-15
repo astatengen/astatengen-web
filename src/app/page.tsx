@@ -117,8 +117,8 @@ export default function HomePage() {
           <p className="eyebrow">Portofolio</p>
           <h2>Proyek live yang menunjukkan cara Asta Tengen menyusun website bisnis.</h2>
           <p>
-            Ruang Rapi adalah website live yang menampilkan informasi layanan, alur order, area layanan, dan jalur kontak dalam pengalaman
-            yang ringkas untuk pengguna mobile.
+            Portofolio ini berisi website live untuk usaha lokal, dari jasa laundry sampai jajanan tradisional, dengan struktur informasi
+            yang jelas dan jalur WhatsApp yang mudah ditemukan.
           </p>
         </div>
         <div className="project-feature-grid">

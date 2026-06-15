@@ -2,6 +2,62 @@ import type { PortfolioProject } from "./types";
 
 export const projects: PortfolioProject[] = [
   {
+    slug: "aneka-jajanan-mutiara",
+    name: "Aneka Jajanan Mutiara",
+    label: "Website Live",
+    projectType: "Proyek website Asta Tengen",
+    industry: "Kuliner lokal",
+    service: "Launch Page AI",
+    year: "2026",
+    liveUrl: "https://anekajajanan.vercel.app/",
+    summary:
+      "Website landing page untuk usaha jajanan tradisional di Tarakan yang menampilkan pilihan produk, harga satuan, paket promo, cara pesan, jam operasional, alamat, dan jalur WhatsApp dari satu halaman yang ringan dibuka di ponsel.",
+    problem:
+      "Usaha jajanan harian perlu menjelaskan menu, harga, promo, cara pemesanan, jam layanan, dan sistem pengambilan tanpa membuat calon pembeli bertanya dari awal lewat WhatsApp.",
+    goal:
+      "Membuat halaman promosi yang langsung membantu calon pembeli memahami pilihan jajanan, melihat harga, lalu mengirim pesanan lewat WhatsApp dengan konteks yang jelas.",
+    design:
+      "Arah visual memakai warna merah, latar terang, tipografi serif, dan foto produk asli agar terasa dekat dengan karakter jajanan tradisional. Struktur halaman dibuat ringkas: hero harga, katalog produk, promo, cara pesan, dan informasi pemesanan.",
+    implementation:
+      "Website dipublikasikan sebagai landing page live dengan navigasi anchor, katalog enam produk, CTA WhatsApp, paket promo 10 buah, informasi jam operasional, alamat, ketentuan pesanan besar, dan tombol WhatsApp mobile.",
+    pages: ["Beranda", "Pilihan jajanan", "Paket promo", "Cara pesan", "Informasi pemesanan"],
+    palette: ["#FFF8EC", "#2D1C18", "#B3261E", "#5F8C3B"],
+    scope: [
+      "struktur landing page satu halaman",
+      "copy produk jajanan dan informasi pemesanan",
+      "katalog enam produk",
+      "CTA WhatsApp",
+      "section paket promo",
+      "informasi lokasi, jam operasional, dan ketentuan pesanan besar",
+      "responsive layout untuk desktop dan mobile",
+    ],
+    decisions: [
+      "Harga satuan dan paket promo diletakkan di hero agar keputusan pembelian terlihat sejak awal.",
+      "Produk ditampilkan sebagai katalog sederhana supaya calon pembeli bisa memilih tanpa membuka banyak halaman.",
+      "Cara pesan dibuat dalam tiga langkah singkat karena alur transaksi tetap diarahkan ke WhatsApp.",
+      "Informasi lokasi, jam operasional, pengambilan, dan pengantaran ditaruh sebelum CTA akhir untuk mengurangi pertanyaan berulang.",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    screenshots: [
+      {
+        src: "/media/projects/aneka-jajanan-desktop.png",
+        alt: "Screenshot desktop website Aneka Jajanan Mutiara.",
+        label: "Desktop",
+        width: 1440,
+        height: 4349,
+      },
+      {
+        src: "/media/projects/aneka-jajanan-mobile.png",
+        alt: "Screenshot mobile website Aneka Jajanan Mutiara.",
+        label: "Mobile",
+        width: 390,
+        height: 6955,
+      },
+    ],
+    note:
+      "Aneka Jajanan Mutiara adalah proyek website live Asta Tengen untuk memperlihatkan pendekatan landing page sederhana bagi usaha kuliner lokal yang mengandalkan pemesanan lewat WhatsApp.",
+  },
+  {
     slug: "ruang-rapi-laundry",
     name: "Ruang Rapi",
     label: "Website Live",

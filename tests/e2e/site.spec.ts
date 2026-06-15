@@ -12,6 +12,7 @@ const routes = [
   "/harga",
   "/proses",
   "/proyek",
+  "/proyek/aneka-jajanan-mutiara",
   "/proyek/ruang-rapi-laundry",
   "/tentang",
   "/kontak",
@@ -48,16 +49,22 @@ test.describe("Asta Tengen v1", () => {
     expect(sitemap.ok()).toBeTruthy();
     const sitemapText = await sitemap.text();
     expect(sitemapText).toContain("/layanan/signature-build-ai");
+    expect(sitemapText).toContain("/proyek/aneka-jajanan-mutiara");
     expect(sitemapText).toContain("/proyek/ruang-rapi-laundry");
     expect(sitemapText).not.toContain("/demo/");
   });
 
-  test("home and portfolio communicate the entry package and internal live project", async ({ page }) => {
+  test("home and portfolio communicate the entry package and live projects", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("heading", { name: /Website rapi untuk usaha kecil/i })).toBeVisible();
     await expect(page.getByRole("link", { name: "Bahas Paket Rp100.000" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Starter Presence" }).first()).toBeVisible();
     await expect(page.getByRole("heading", { name: "Launch Page AI" }).first()).toBeVisible();
+
+    await page.goto("/proyek/aneka-jajanan-mutiara");
+    await expect(page.getByText("Proyek website Asta Tengen").first()).toBeVisible();
+    await expect(page.getByRole("img", { name: "Screenshot desktop website Aneka Jajanan Mutiara." })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Buka website live" })).toHaveAttribute("href", "https://anekajajanan.vercel.app/");
 
     await page.goto("/proyek/ruang-rapi-laundry");
     await expect(page.getByText("Proyek internal Asta Tengen").first()).toBeVisible();
