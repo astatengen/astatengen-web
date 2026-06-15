@@ -7,10 +7,14 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { ServiceJourney } from "@/components/ServiceJourney";
-import { projectStudies } from "@/content/projects";
+import { projects } from "@/content/projects";
 import { services } from "@/content/services";
 import { getWhatsAppUrl, siteConfig } from "@/content/site";
 import { organizationJsonLd, servicesJsonLd } from "@/lib/json-ld";
+
+const starterService = services.find((service) => service.slug === "starter-presence") ?? services[0];
+const launchAiService = services.find((service) => service.slug === "launch-page-ai") ?? services[1];
+const profileAiService = services.find((service) => service.slug === "business-profile-ai") ?? services[2];
 
 export default function HomePage() {
   return (
@@ -25,16 +29,25 @@ export default function HomePage() {
         <div className="hero-content">
           <Reveal>
             <p className="eyebrow">{siteConfig.tagline}</p>
-            <h1>Website yang membuat bisnis lebih mudah dipercaya.</h1>
+            <h1>Website rapi untuk usaha kecil, mulai Rp100.000.</h1>
           </Reveal>
           <Reveal delay={0.08}>
-            <p className="hero-copy">{siteConfig.description}</p>
+            <p className="hero-copy">
+              Asta Tengen membantu usaha kecil, mikro, dan bisnis lokal tampil lebih serius dengan website yang jelas, ringan, dan sesuai
+              kebutuhan. Mulai dari presence sederhana sampai website dengan Asta Assist.
+            </p>
           </Reveal>
           <Reveal className="hero-actions" delay={0.14}>
-            <a className="button button-primary" href={getWhatsAppUrl()}>
-              Konsultasikan Website
+            <a className="button button-primary" href={getWhatsAppUrl("Halo Asta Tengen, saya ingin bahas paket website mulai Rp100.000.")}>
+              Bahas Paket Rp100.000
             </a>
-            <p>Mulai Rp100.000 untuk kebutuhan paling sederhana, dengan ruang pengembangan hingga website bisnis yang lebih lengkap.</p>
+            <ButtonLink href={`/layanan/${launchAiService.slug}`} variant="light">
+              Lihat Paket AI
+            </ButtonLink>
+            <p>
+              Starter Presence cocok untuk mulai tampil online. Paket AI masuk ketika bisnis perlu landing page atau profil yang lebih
+              lengkap dengan Asta Assist.
+            </p>
           </Reveal>
         </div>
       </section>
@@ -49,32 +62,82 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p>
-              Asta Tengen membantu usaha kecil dan bisnis yang sedang berkembang menyusun tampilan online yang lebih rapi, lebih mudah
-              dijelaskan, dan lebih siap menerima pelanggan.
+              Fokus kami bukan membuat website terasa mahal. Fokusnya adalah membuat usaha terlihat tertata, informasinya mudah dipahami,
+              dan calon pelanggan tahu langkah berikutnya.
             </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="offer-ladder-section">
+        <div className="section-heading">
+          <p className="eyebrow">Cara memilih</p>
+          <h2>Mulai dari yang cukup dulu, naik saat butuh fitur lebih.</h2>
+          <p>
+            Harga dibuat berjenjang supaya usaha kecil tetap bisa mulai. Starter menjaga biaya masuk tetap rendah, sedangkan paket AI
+            memberi ruang untuk desain, domain, hosting, dan Asta Assist.
+          </p>
+        </div>
+        <div className="offer-ladder">
+          <Reveal className="offer-card offer-card-entry">
+            <p className="eyebrow">Pintu masuk</p>
+            <h3>{starterService.name}</h3>
+            <strong>{starterService.price}</strong>
+            <p>{starterService.summary}</p>
+            <ul>
+              <li>Satu halaman sederhana</li>
+              <li>Subdomain Asta Tengen</li>
+              <li>Tanpa Asta Assist</li>
+            </ul>
+            <ButtonLink href={`/layanan/${starterService.slug}`} variant="ghost">
+              Detail Starter
+            </ButtonLink>
+          </Reveal>
+          <Reveal className="offer-card offer-card-ai" delay={0.08}>
+            <p className="eyebrow">Naik kelas</p>
+            <h3>{launchAiService.name}</h3>
+            <strong>{launchAiService.price}</strong>
+            <p>
+              Paket awal untuk website dengan Asta Assist, domain .com, hosting, SSL, SEO dasar, dan struktur halaman yang lebih matang.
+            </p>
+            <ul>
+              <li>Untuk promosi produk, jasa, acara, kelas, atau kampanye</li>
+              <li>Asta Assist sesuai batas paket</li>
+              <li>Jalur upgrade menuju {profileAiService.name}</li>
+            </ul>
+            <ButtonLink href={`/layanan/${launchAiService.slug}`} variant="dark">
+              Lihat Paket AI
+            </ButtonLink>
           </Reveal>
         </div>
       </section>
 
       <section className="projects-section dark-section">
         <div className="section-heading">
-          <p className="eyebrow">Portofolio awal</p>
-          <h2>Studi konsep yang menunjukkan cara Asta Tengen berpikir.</h2>
+          <p className="eyebrow">Portofolio</p>
+          <h2>Proyek live yang menunjukkan cara Asta Tengen menyusun website bisnis.</h2>
           <p>
-            Belum ada proyek klien komersial yang ditampilkan. Tiga contoh berikut adalah studi konsep fiktif, dibuat untuk memperlihatkan
-            pendekatan desain tanpa membuat klaim kerja sama.
+            Ruang Rapi adalah website live yang menampilkan informasi layanan, alur order, area layanan, dan jalur kontak dalam pengalaman
+            yang ringkas untuk pengguna mobile.
           </p>
         </div>
         <div className="project-feature-grid">
-          {projectStudies.map((project, index) => (
+          {projects.map((project, index) => (
             <Reveal key={project.slug} className={index === 0 ? "project-tile project-tile-large" : "project-tile"} delay={index * 0.06}>
               <Link href={`/proyek/${project.slug}`}>
-                <div className="project-visual" style={{ "--accent": project.palette[2] } as CSSProperties}>
+                <div className="project-preview" style={{ "--accent": project.palette[2] } as CSSProperties}>
+                  <Image
+                    src={project.screenshots[0].src}
+                    alt={project.screenshots[0].alt}
+                    width={project.screenshots[0].width}
+                    height={project.screenshots[0].height}
+                    sizes="(max-width: 720px) 100vw, 55vw"
+                  />
                   <span>{project.label}</span>
-                  <strong>{project.name}</strong>
                 </div>
                 <div className="project-meta">
                   <span>{project.industry}</span>
+                  <span>{project.projectType}</span>
                   <span>{project.service}</span>
                 </div>
                 <h3>{project.name}</h3>

@@ -1,27 +1,26 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import type { CSSProperties } from "react";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ButtonLink } from "@/components/ButtonLink";
 import { JsonLd } from "@/components/JsonLd";
-import { getProjectStudy, projectStudies } from "@/content/projects";
+import { getProject, projects } from "@/content/projects";
 import { breadcrumbJsonLd } from "@/lib/json-ld";
 import { createMetadata } from "@/lib/metadata";
 
 export function generateStaticParams() {
-  return projectStudies.map((project) => ({ slug: project.slug }));
+  return projects.map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const project = getProjectStudy(slug);
+  const project = getProject(slug);
 
   if (!project) {
     return createMetadata({
       title: "Proyek tidak ditemukan",
-      description: "Studi konsep Asta Tengen tidak ditemukan.",
+      description: "Proyek Asta Tengen tidak ditemukan.",
       path: "/proyek",
     });
   }
@@ -30,18 +29,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: project.name,
     description: `${project.label} untuk ${project.industry}: ${project.summary}`,
     path: `/proyek/${project.slug}`,
+    image: project.screenshots[0].src,
   });
 }
 
 export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const project = getProjectStudy(slug);
+  const project = getProject(slug);
 
   if (!project) {
     notFound();
   }
-
-  const nextProject = projectStudies[(projectStudies.findIndex((item) => item.slug === project.slug) + 1) % projectStudies.length];
 
   return (
     <>
@@ -65,6 +63,10 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         <p>{project.summary}</p>
         <dl className="case-meta">
           <div>
+            <dt>Jenis</dt>
+            <dd>{project.projectType}</dd>
+          </div>
+          <div>
             <dt>Industri</dt>
             <dd>{project.industry}</dd>
           </div>
@@ -79,9 +81,32 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         </dl>
       </section>
 
-      <section className="case-visual-band" style={{ "--accent": project.palette[2] } as CSSProperties}>
-        <span>{project.label}</span>
-        <strong>{project.name}</strong>
+      <section className="case-showcase" aria-label={`Tampilan website ${project.name}`}>
+        <div className="case-browser">
+          <div className="case-frame-bar" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </div>
+          <Image
+            src={project.screenshots[0].src}
+            alt={project.screenshots[0].alt}
+            width={project.screenshots[0].width}
+            height={project.screenshots[0].height}
+            sizes="(max-width: 920px) 100vw, 68vw"
+            priority
+          />
+        </div>
+        <div className="case-phone">
+          <Image
+            src={project.screenshots[1].src}
+            alt={project.screenshots[1].alt}
+            width={project.screenshots[1].width}
+            height={project.screenshots[1].height}
+            sizes="(max-width: 920px) 42vw, 20vw"
+          />
+          <span>{project.screenshots[1].label}</span>
+        </div>
       </section>
 
       <section className="case-study-content">
@@ -109,19 +134,41 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             ))}
           </ul>
         </article>
+        <article>
+          <h2>Scope pekerjaan</h2>
+          <ul>
+            {project.scope.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
+        <article>
+          <h2>Keputusan desain</h2>
+          <ul>
+            {project.decisions.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
+        <article>
+          <h2>Stack teknis</h2>
+          <ul>
+            {project.stack.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
         <article className="case-note">
-          <h2>Catatan kejujuran</h2>
-          <p>
-            Studi ini memakai identitas fiktif. Tidak ada testimoni, statistik penjualan, logo bisnis nyata, atau klaim kerja sama komersial.
-          </p>
+          <h2>Status proyek</h2>
+          <p>{project.note}</p>
         </article>
       </section>
 
       <section className="case-actions">
-        <ButtonLink href={`/demo/${project.demoSlug}`} variant="dark">
-          Buka live demo
-        </ButtonLink>
-        <Link href={`/proyek/${nextProject.slug}`}>Lanjut ke {nextProject.name}</Link>
+        <a className="button button-dark" href={project.liveUrl} target="_blank" rel="noreferrer">
+          Buka website live
+        </a>
+        <Link href="/kontak">Buat website untuk usahamu</Link>
       </section>
     </>
   );

@@ -10,7 +10,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Harga",
-  description: "Daftar harga, biaya tahunan, revisi, garansi, dan batas Asta Assist untuk layanan Asta Tengen.",
+  description: "Daftar harga website Asta Tengen mulai Rp100.000, termasuk biaya tahunan, revisi, garansi, dan batas Asta Assist.",
   path: "/harga",
 });
 
@@ -32,8 +32,11 @@ export default function PricingPage() {
           ]}
         />
         <p className="eyebrow">Harga</p>
-        <h1>Kebutuhan yang berbeda membutuhkan ruang kerja yang berbeda.</h1>
-        <p>Harga berikut bersumber dari dokumen layanan Asta Tengen dan berlaku selama ruang lingkup proyek tidak berubah.</p>
+        <h1>Mulai ringan, lalu naik ketika bisnis butuh fitur lebih.</h1>
+        <p>
+          Harga berikut bersumber dari dokumen layanan Asta Tengen. Starter menjaga biaya masuk tetap rendah, sedangkan paket AI mencakup
+          ruang kerja, domain, hosting, dan Asta Assist sesuai batas tertulis.
+        </p>
       </section>
 
       <section className="pricing-table-section" aria-label="Tabel harga layanan">
@@ -70,6 +73,18 @@ export default function PricingPage() {
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="split-section">
+        <div>
+          <p className="eyebrow">Harga dan kualitas</p>
+          <h2>Starter dibuat hemat. Paket AI dibuat untuk pekerjaan yang lebih lengkap.</h2>
+        </div>
+        <ul>
+          <li>Starter Presence cocok untuk usaha yang baru perlu tampil online dengan satu halaman sederhana.</li>
+          <li>Paket AI cocok ketika bisnis perlu domain, hosting, desain lebih matang, dan Asta Assist.</li>
+          <li>Semakin tinggi paket, semakin luas ruang desain, jumlah halaman, revisi, garansi, dan dukungan teknisnya.</li>
+        </ul>
       </section>
 
       <section className="split-section">

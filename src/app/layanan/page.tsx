@@ -10,7 +10,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Layanan",
-  description: "Paket website Asta Tengen dari Starter Presence hingga Signature Build AI.",
+  description: "Paket website Asta Tengen dari Starter Presence Rp100.000 hingga paket AI dengan Asta Assist.",
   path: "/layanan",
 });
 
@@ -32,10 +32,10 @@ export default function ServicesPage() {
           ]}
         />
         <p className="eyebrow">Layanan</p>
-        <h1>Paket website dengan batas fitur, biaya, dan masa dukungan yang tertulis jelas.</h1>
+        <h1>Paket website terjangkau dengan batas kerja yang jelas.</h1>
         <p>
-          Setiap paket memiliki ruang kerja berbeda. Starter Presence dibuat untuk kebutuhan paling sederhana, sedangkan paket AI
-          mencakup Asta Assist sesuai batas penggunaan masing-masing.
+          Starter Presence dibuat sebagai pintu masuk paling ringan. Paket AI masuk ketika usaha membutuhkan desain lebih matang, domain,
+          hosting, dan Asta Assist sesuai batas penggunaan masing-masing.
         </p>
       </section>
 

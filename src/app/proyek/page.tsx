@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
-import { projectStudies } from "@/content/projects";
+import { projects } from "@/content/projects";
 import { breadcrumbJsonLd } from "@/lib/json-ld";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Proyek",
-  description: "Studi konsep Asta Tengen untuk menunjukkan pendekatan desain tanpa klaim proyek klien komersial.",
+  description: "Portofolio proyek live Asta Tengen, termasuk Ruang Rapi sebagai proyek internal untuk website jasa lokal.",
   path: "/proyek",
 });
 
@@ -32,26 +33,32 @@ export default function ProjectsPage() {
           ]}
         />
         <p className="eyebrow">Proyek</p>
-        <h1>Portofolio awal berupa studi konsep, bukan klaim proyek klien.</h1>
+        <h1>Proyek live yang bisa dinilai langsung.</h1>
         <p>
-          Asta Tengen belum menampilkan proyek komersial. Studi konsep berikut menggunakan identitas fiktif untuk memperlihatkan cara
-          menyusun informasi, visual, dan jalur tindakan.
+          Ruang Rapi adalah proyek internal Asta Tengen untuk memperlihatkan bagaimana website jasa lokal dapat disusun dengan informasi
+          yang jelas, visual bersih, dan jalur WhatsApp yang mudah ditemukan.
         </p>
       </section>
 
       <section className="project-index">
-        {projectStudies.map((project, index) => (
+        {projects.map((project, index) => (
           <Reveal key={project.slug} className="project-index-row" delay={index * 0.06}>
             <Link href={`/proyek/${project.slug}`}>
-              <div className="project-visual" style={{ "--accent": project.palette[2] } as CSSProperties}>
+              <div className="project-preview" style={{ "--accent": project.palette[2] } as CSSProperties}>
+                <Image
+                  src={project.screenshots[0].src}
+                  alt={project.screenshots[0].alt}
+                  width={project.screenshots[0].width}
+                  height={project.screenshots[0].height}
+                  sizes="(max-width: 920px) 100vw, 42vw"
+                />
                 <span>{project.label}</span>
-                <strong>{project.name}</strong>
               </div>
               <div>
                 <p className="eyebrow">{project.industry}</p>
                 <h2>{project.name}</h2>
                 <p>{project.summary}</p>
-                <span className="text-link">Baca studi konsep</span>
+                <span className="text-link">Lihat detail proyek</span>
               </div>
             </Link>
           </Reveal>

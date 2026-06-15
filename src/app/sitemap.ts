@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { projectStudies } from "@/content/projects";
+import { projects } from "@/content/projects";
 import { services } from "@/content/services";
 import { publicRoutes } from "@/content/site";
 import { absoluteUrl } from "@/lib/site-url";
@@ -9,8 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const dynamicRoutes = [
     ...services.map((service) => `/layanan/${service.slug}`),
-    ...projectStudies.map((project) => `/proyek/${project.slug}`),
-    ...projectStudies.map((project) => `/demo/${project.demoSlug}`),
+    ...projects.map((project) => `/proyek/${project.slug}`),
   ];
 
   return [...publicRoutes, ...dynamicRoutes].map((route) => ({

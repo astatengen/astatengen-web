@@ -1,71 +1,63 @@
-import type { ProjectStudy } from "./types";
+import type { PortfolioProject } from "./types";
 
-export const projectStudies: ProjectStudy[] = [
-  {
-    slug: "kedai-rasa-pesisir",
-    demoSlug: "kedai-rasa-pesisir",
-    name: "Kedai Rasa Pesisir",
-    label: "Studi Konsep",
-    industry: "Kuliner lokal",
-    service: "Launch Page AI",
-    year: "2026",
-    summary:
-      "Konsep landing page untuk kedai makan lokal yang perlu menjelaskan menu, lokasi, jam buka, dan jalur pemesanan dengan cepat.",
-    problem:
-      "Banyak calon pelanggan hanya membutuhkan kepastian praktis: menu apa yang tersedia, berapa kisaran harganya, di mana lokasinya, dan bagaimana memesan.",
-    goal:
-      "Membuat halaman yang mudah dipindai dari ponsel, menjaga rasa lokal tetap hangat, dan mengarahkan pengguna ke WhatsApp tanpa membuat pengalaman terasa agresif.",
-    design:
-      "Arah visual memakai warna hangat, layout editorial sederhana, ritme foto/menu, dan blok informasi yang jelas untuk pengguna yang sedang mencari tempat makan.",
-    implementation:
-      "Demo dibuat sebagai halaman statis ringan dengan menu ringkas, informasi lokasi, FAQ dasar, dan CTA WhatsApp. Tidak ada klaim penjualan atau testimoni.",
-    pages: ["Beranda", "Menu singkat", "Lokasi", "Pertanyaan umum", "CTA pemesanan"],
-    palette: ["#FFFDF8", "#151411", "#FF5A1F", "#D8C8B0"],
-  },
+export const projects: PortfolioProject[] = [
   {
     slug: "ruang-rapi-laundry",
-    demoSlug: "ruang-rapi-laundry",
-    name: "Ruang Rapi Laundry",
-    label: "Studi Konsep",
+    name: "Ruang Rapi",
+    label: "Website Live",
+    projectType: "Proyek internal Asta Tengen",
     industry: "Jasa lokal",
     service: "Business Profile AI",
     year: "2026",
+    liveUrl: "https://ruangrapi.vercel.app/",
     summary:
-      "Konsep website profil untuk jasa laundry yang perlu membuat paket layanan, area antar jemput, dan alur order terasa jelas.",
+      "Website profil laundry yang dirancang sebagai proyek internal Asta Tengen untuk menunjukkan cara usaha jasa lokal menjelaskan layanan, harga, proses, area layanan, dan jalur kontak dari satu halaman yang mudah dibuka di ponsel.",
     problem:
-      "Pengguna sering ragu karena belum mengetahui jenis layanan, estimasi pengerjaan, batas area, dan cara mengirim pakaian.",
+      "Usaha laundry sering menerima pertanyaan berulang tentang jenis layanan, harga kiloan, barang satuan, estimasi, area antar-jemput, dan cara order. Website perlu membantu calon pelanggan memahami informasi dasar sebelum membuka WhatsApp.",
     goal:
-      "Menyusun informasi jasa menjadi halaman yang tenang, mudah dipercaya, dan membantu pengguna memilih layanan sebelum menghubungi admin.",
+      "Menyusun profil bisnis yang terlihat rapi, realistis untuk usaha lokal, dan membantu pengguna memilih layanan dengan lebih percaya diri sebelum menghubungi admin.",
     design:
-      "Komposisi dibuat bersih dengan grid informasi, tipografi besar untuk paket utama, dan bagian proses yang mengurangi kekhawatiran calon pelanggan.",
+      "Arah visual dibuat bersih, ringan, dan tidak terlalu mewah agar tetap terasa cocok untuk market jasa lokal. Informasi dipisah menjadi blok layanan, paket utama, proses, area, dan catatan operasional.",
     implementation:
-      "Demo dibuat dengan struktur profil bisnis, layanan, alur pengerjaan, cakupan area, dan CTA WhatsApp. Semua identitas bersifat fiktif.",
+      "Website dipublikasikan sebagai halaman live dengan navigasi sederhana, CTA WhatsApp, informasi paket, section proses, area layanan, dan catatan penting sebelum menyerahkan pakaian.",
     pages: ["Beranda", "Layanan", "Proses", "Area layanan", "Kontak"],
     palette: ["#F1E7D6", "#0B0B0A", "#FF5A1F", "#FFFDF8"],
-  },
-  {
-    slug: "katalog-nusa-kriya",
-    demoSlug: "katalog-nusa-kriya",
-    name: "Katalog Nusa Kriya",
-    label: "Studi Konsep",
-    industry: "Produk lokal",
-    service: "Product Catalogue AI",
-    year: "2026",
-    summary:
-      "Konsep katalog untuk brand produk lokal yang perlu menampilkan kategori, detail produk, dan jalur tanya produk lewat WhatsApp.",
-    problem:
-      "Produk lokal sering hanya tampil di chat atau media sosial sehingga pembeli sulit membandingkan varian, material, dan informasi pemesanan.",
-    goal:
-      "Membangun katalog ringan yang membantu pengguna menemukan produk sebelum bertanya lebih lanjut kepada pemilik bisnis.",
-    design:
-      "Arah visual menggabungkan ruang kosong, daftar produk editorial, dan aksen oranye yang digunakan sebagai penanda tindakan, bukan dekorasi berlebihan.",
-    implementation:
-      "Demo dibuat dengan kategori, detail produk konsep, ringkasan material, dan CTA konsultasi. Tidak ada stok, harga nyata, atau klaim transaksi.",
-    pages: ["Beranda", "Kategori", "Detail produk", "Cara pesan", "Kontak"],
-    palette: ["#151411", "#FFFDF8", "#FF5A1F", "#F1E7D6"],
+    scope: [
+      "struktur landing page satu halaman",
+      "copy layanan laundry dan alur order",
+      "CTA WhatsApp",
+      "section paket kiloan dan layanan satuan",
+      "informasi area antar-jemput",
+      "responsive layout untuk desktop dan mobile",
+    ],
+    decisions: [
+      "Harga dan paket dibuat cepat terlihat agar calon pelanggan tidak harus bertanya dari awal.",
+      "Bagian proses diletakkan sebelum area layanan supaya pengguna memahami alur sebelum mengirim chat.",
+      "Visual dibuat bersih dan tenang agar layanan terasa rapi tanpa terlihat seperti brand besar yang jauh dari usaha lokal.",
+      "CTA WhatsApp muncul pada titik keputusan, bukan sebagai elemen yang terus menekan pengguna.",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    screenshots: [
+      {
+        src: "/media/projects/ruangrapi-desktop.png",
+        alt: "Screenshot desktop website Ruang Rapi.",
+        label: "Desktop",
+        width: 1440,
+        height: 4784,
+      },
+      {
+        src: "/media/projects/ruangrapi-mobile.png",
+        alt: "Screenshot mobile website Ruang Rapi.",
+        label: "Mobile",
+        width: 780,
+        height: 18158,
+      },
+    ],
+    note:
+      "Ruang Rapi adalah proyek internal Asta Tengen yang dibuat untuk memperlihatkan pendekatan desain, copy, dan struktur informasi untuk usaha jasa lokal.",
   },
 ];
 
-export function getProjectStudy(slug: string) {
-  return projectStudies.find((project) => project.slug === slug || project.demoSlug === slug);
+export function getProject(slug: string) {
+  return projects.find((project) => project.slug === slug);
 }

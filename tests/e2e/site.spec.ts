@@ -12,12 +12,7 @@ const routes = [
   "/harga",
   "/proses",
   "/proyek",
-  "/proyek/kedai-rasa-pesisir",
   "/proyek/ruang-rapi-laundry",
-  "/proyek/katalog-nusa-kriya",
-  "/demo/kedai-rasa-pesisir",
-  "/demo/ruang-rapi-laundry",
-  "/demo/katalog-nusa-kriya",
   "/tentang",
   "/kontak",
   "/kebijakan-privasi",
@@ -53,7 +48,22 @@ test.describe("Asta Tengen v1", () => {
     expect(sitemap.ok()).toBeTruthy();
     const sitemapText = await sitemap.text();
     expect(sitemapText).toContain("/layanan/signature-build-ai");
-    expect(sitemapText).toContain("/demo/katalog-nusa-kriya");
+    expect(sitemapText).toContain("/proyek/ruang-rapi-laundry");
+    expect(sitemapText).not.toContain("/demo/");
+  });
+
+  test("home and portfolio communicate the entry package and internal live project", async ({ page }) => {
+    await page.goto("/");
+    await expect(page.getByRole("heading", { name: /Website rapi untuk usaha kecil/i })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Bahas Paket Rp100.000" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Starter Presence" }).first()).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Launch Page AI" }).first()).toBeVisible();
+
+    await page.goto("/proyek/ruang-rapi-laundry");
+    await expect(page.getByText("Proyek internal Asta Tengen").first()).toBeVisible();
+    await expect(page.getByRole("img", { name: "Screenshot desktop website Ruang Rapi." })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Buka website live" })).toHaveAttribute("href", "https://ruangrapi.vercel.app/");
+    await expect(page.locator("body")).not.toContainText("Studi Konsep");
   });
 
   test("contact form validates privacy consent and opens WhatsApp message", async ({ page }) => {

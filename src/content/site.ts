@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Asta Tengen",
-  tagline: "Website untuk bisnis yang ingin terlihat serius.",
+  tagline: "Website terjangkau untuk usaha yang ingin terlihat serius.",
   description:
-    "Asta Tengen merancang dan membangun website yang rapi, cepat, dan mudah digunakan untuk usaha lokal, profesional, dan bisnis yang sedang tumbuh.",
+    "Asta Tengen merancang dan membangun website yang rapi, cepat, dan mudah digunakan untuk usaha kecil, bisnis lokal, dan profesional yang ingin mulai tampil lebih serius dengan anggaran realistis.",
   location: "Semarang, Jawa Tengah, Indonesia",
   email: "ggbanget2023@gmail.com",
   whatsappDisplay: "+62 878-1627-0140",

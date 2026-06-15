@@ -358,13 +358,14 @@ main {
 }
 
 .hero-actions {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
 }
 
 .hero-actions p {
+  flex-basis: 100%;
   max-width: 42ch;
   font-size: 0.98rem;
   line-height: 1.55;
@@ -500,8 +501,70 @@ main {
 }
 
 .projects-section,
-.process-preview {
+.process-preview,
+.offer-ladder-section {
   padding: clamp(4rem, 9vw, 8rem) var(--gutter);
+}
+
+.offer-ladder-section {
+  background: var(--paper);
+}
+
+.offer-ladder {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 1rem;
+  width: min(100%, var(--max));
+  margin: 0 auto;
+}
+
+.offer-card {
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.offer-card-ai {
+  color: var(--paper);
+  border-color: var(--border-dark);
+  background: var(--ink);
+}
+
+.offer-card h3 {
+  max-width: 12ch;
+}
+
+.offer-card strong {
+  color: var(--orange-dark);
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  line-height: 0.95;
+}
+
+.offer-card-ai strong {
+  color: #ff8a5e;
+}
+
+.offer-card ul {
+  display: grid;
+  gap: 0.55rem;
+  padding-left: 1.1rem;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.offer-card-ai p,
+.offer-card-ai li {
+  color: rgba(255, 253, 248, 0.74);
+}
+
+.offer-card-ai .button-dark {
+  color: var(--ink);
+  background: var(--paper);
 }
 
 .project-feature-grid {
@@ -528,50 +591,62 @@ main {
 }
 
 .project-index-row a {
-  grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1fr);
-  align-items: center;
+  grid-template-columns: 1fr;
   color: var(--ink);
   border-color: var(--border-light);
 }
 
-.project-visual {
+.project-preview {
   position: relative;
-  display: grid;
   min-height: 320px;
-  padding: 1rem;
+  aspect-ratio: 16 / 10;
+  padding: 0.75rem;
   overflow: hidden;
   color: var(--paper);
+  border: 1px solid var(--border-dark);
+  border-bottom: 4px solid var(--accent, var(--orange));
   border-radius: 8px;
-  background:
-    linear-gradient(90deg, rgba(255, 253, 248, 0.08) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(255, 253, 248, 0.08) 1px, transparent 1px),
-    linear-gradient(135deg, var(--panel), #080807);
-  background-size: 42px 42px, 42px 42px, auto;
+  background: var(--panel);
 }
 
-.project-visual::after {
+.project-preview::after {
   position: absolute;
-  right: 12%;
-  bottom: 14%;
-  width: 44%;
-  height: 34%;
+  inset: 0.75rem;
+  pointer-events: none;
   content: "";
-  border: 2px solid var(--accent, var(--orange));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
 }
 
-.project-visual span {
-  align-self: start;
-  color: #ffb08d;
+.project-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 6px;
+}
+
+.project-preview span {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  padding: 0.4rem 0.55rem;
+  color: var(--paper);
   font-size: 0.78rem;
   font-weight: 850;
   text-transform: uppercase;
+  background: rgba(11, 11, 10, 0.78);
+  border: 1px solid rgba(255, 253, 248, 0.2);
+  border-radius: 6px;
 }
 
-.project-visual strong {
-  align-self: end;
-  max-width: 10ch;
-  font-size: clamp(2rem, 4vw, 4rem);
-  line-height: 1;
+.project-index-row .project-preview {
+  min-height: clamp(260px, 32vw, 420px);
+  aspect-ratio: 16 / 9;
 }
 
 .project-meta {
@@ -1058,8 +1133,8 @@ dd {
 }
 
 .case-meta {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 760px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 980px;
 }
 
 .case-meta div {
@@ -1067,34 +1142,77 @@ dd {
   border-top-color: var(--border-dark);
 }
 
-.case-visual-band {
+.case-showcase {
   display: grid;
-  min-height: 48svh;
-  padding: 2rem var(--gutter);
+  grid-template-columns: minmax(0, 820px) minmax(220px, 320px);
+  gap: 1rem;
+  justify-content: center;
+  padding: clamp(3rem, 7vw, 6rem) var(--gutter);
+  background: var(--cream);
+}
+
+.case-browser,
+.case-phone {
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 28px 70px rgba(11, 11, 10, 0.12);
+}
+
+.case-browser {
+  height: min(72svh, 760px);
+}
+
+.case-frame-bar {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  height: 34px;
+  padding: 0 0.8rem;
+  border-bottom: 1px solid var(--border-light);
+  background: var(--paper);
+}
+
+.case-frame-bar span {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--cream-dark);
+}
+
+.case-browser img {
+  width: 100%;
+  height: calc(100% - 34px);
+  object-fit: cover;
+  object-position: top;
+}
+
+.case-phone {
+  position: relative;
+  align-self: start;
+  height: min(72svh, 760px);
+  padding: 0.65rem;
+}
+
+.case-phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 6px;
+}
+
+.case-phone span {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.35rem 0.5rem;
   color: var(--paper);
-  background:
-    linear-gradient(90deg, rgba(255, 253, 248, 0.08) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(255, 253, 248, 0.08) 1px, transparent 1px),
-    var(--ink);
-  background-size: 56px 56px, 56px 56px, auto;
-}
-
-.case-visual-band span,
-.case-visual-band strong {
-  width: min(100%, var(--max));
-  margin: 0 auto;
-}
-
-.case-visual-band span {
-  color: #ffb08d;
+  font-size: 0.78rem;
   font-weight: 850;
-  text-transform: uppercase;
-}
-
-.case-visual-band strong {
-  align-self: end;
-  font-size: clamp(3rem, 9vw, 8rem);
-  line-height: 0.95;
+  background: rgba(11, 11, 10, 0.78);
+  border-radius: 6px;
 }
 
 .case-study-content {
@@ -1263,81 +1381,6 @@ dd {
   font-weight: 800;
 }
 
-.demo-page {
-  min-height: 100svh;
-  padding: clamp(1rem, 4vw, 3rem);
-  font-family: inherit;
-}
-
-.demo-badge {
-  display: inline-flex;
-  min-height: 36px;
-  align-items: center;
-  padding: 0.45rem 0.65rem;
-  margin-bottom: 2rem;
-  border: 1px solid currentColor;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 850;
-  text-transform: uppercase;
-}
-
-.demo-hero {
-  display: grid;
-  gap: 1rem;
-  min-height: 54svh;
-  align-content: end;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid currentColor;
-}
-
-.demo-hero h1 {
-  max-width: 10ch;
-}
-
-.demo-restaurant {
-  color: #25130d;
-  background: #f6e5d0;
-}
-
-.demo-laundry {
-  color: #10100f;
-  background: #fffdf8;
-}
-
-.demo-catalogue {
-  color: #fffdf8;
-  background: #151411;
-}
-
-.demo-menu,
-.demo-steps,
-.demo-products {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  padding: 3rem 0;
-}
-
-.demo-menu article,
-.demo-steps article,
-.demo-products article,
-.demo-contact {
-  display: grid;
-  gap: 0.7rem;
-  padding-top: 1rem;
-  border-top: 1px solid currentColor;
-}
-
-.demo-products article div {
-  aspect-ratio: 1.2;
-  border: 1px solid rgba(255, 253, 248, 0.25);
-  background:
-    linear-gradient(90deg, rgba(255, 90, 31, 0.35) 0 12%, transparent 12%),
-    linear-gradient(180deg, rgba(255, 253, 248, 0.08) 1px, transparent 1px);
-  background-size: auto, 36px 36px;
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1373,6 +1416,8 @@ dd {
   .statement-grid,
   .section-heading,
   .service-journey,
+  .offer-ladder,
+  .case-showcase,
   .price-intro,
   .about-preview,
   .split-section,
@@ -1429,7 +1474,6 @@ dd {
     padding-top: 6.5rem;
   }
 
-  .hero-actions,
   .project-feature-grid,
   .process-grid,
   .process-page-grid,
@@ -1437,10 +1481,7 @@ dd {
   .case-study-content,
   .two-column-copy,
   .field-grid,
-  .faq-strip,
-  .demo-menu,
-  .demo-steps,
-  .demo-products {
+  .faq-strip {
     grid-template-columns: 1fr;
   }
 
@@ -1478,7 +1519,12 @@ dd {
     flex-wrap: wrap;
   }
 
-  .project-visual {
+  .project-preview {
     min-height: 240px;
+  }
+
+  .case-browser,
+  .case-phone {
+    height: min(68svh, 640px);
   }
 }

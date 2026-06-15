@@ -30,14 +30,15 @@ export type ServicePackage = {
   constraints: string[];
 };
 
-export type ProjectStudy = {
+export type PortfolioProject = {
   slug: string;
-  demoSlug: string;
   name: string;
-  label: "Studi Konsep";
+  label: "Website Live";
+  projectType: string;
   industry: string;
   service: string;
   year: string;
+  liveUrl: string;
   summary: string;
   problem: string;
   goal: string;
@@ -45,4 +46,15 @@ export type ProjectStudy = {
   implementation: string;
   pages: string[];
   palette: string[];
+  scope: string[];
+  decisions: string[];
+  stack: string[];
+  screenshots: Array<{
+    src: string;
+    alt: string;
+    label: string;
+    width: number;
+    height: number;
+  }>;
+  note: string;
 };
