@@ -15,14 +15,7 @@ export const siteConfig = {
       role: "Pendiri / Web Designer & Frontend",
       image: "/media/people/roychan.jpeg",
       alt: "Potret Achmad Roychan, pendiri Asta Tengen.",
-      note: "Berfokus pada arah visual, struktur halaman, dan pengalaman antarmuka.",
-    },
-    {
-      name: "Aditya Sendy Ardiansyah",
-      role: "Pendiri / Website & Implementation",
-      image: "/media/people/aditya.jpeg",
-      alt: "Potret Aditya Sendy Ardiansyah, pendiri Asta Tengen.",
-      note: "Berfokus pada implementasi, detail teknis, dan kesiapan peluncuran.",
+      note: "Mendirikan dan menjalankan Asta Tengen secara solo, dengan fokus pada arah visual, struktur halaman, implementasi frontend, dan kesiapan peluncuran.",
     },
   ],
 };

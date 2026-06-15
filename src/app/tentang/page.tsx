@@ -10,7 +10,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Tentang",
-  description: "Asta Tengen adalah agensi website dari Semarang yang didirikan dan dijalankan oleh dua orang.",
+  description: "Asta Tengen adalah agensi website solo dari Semarang yang didirikan dan dijalankan oleh Achmad Roychan.",
   path: "/tentang",
 });
 
@@ -34,8 +34,8 @@ export default function AboutPage() {
         <p className="eyebrow">Tentang</p>
         <h1>Studio kecil dari Semarang yang dibangun dengan batas kerja yang jelas.</h1>
         <p>
-          Asta Tengen didirikan dan dijalankan oleh Achmad Roychan serta Aditya Sendy Ardiansyah. Kami tidak menampilkan kantor,
-          dokumentasi kerja, atau tim tambahan yang belum tersedia sebagai aset nyata.
+          Asta Tengen didirikan dan dijalankan secara solo oleh Achmad Roychan. Website ini tidak menampilkan kantor, dokumentasi kerja,
+          atau anggota tim tambahan yang belum tersedia sebagai bagian nyata dari agensi.
         </p>
       </section>
 

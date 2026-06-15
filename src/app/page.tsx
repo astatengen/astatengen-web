@@ -222,10 +222,10 @@ export default function HomePage() {
         </div>
         <div>
           <p className="eyebrow">Tentang</p>
-          <h2>Dua orang yang membangun studio kecil dengan batas kerja yang jelas.</h2>
+          <h2>Agensi solo yang dibangun dengan batas kerja yang jelas.</h2>
           <p>
             Asta Tengen tidak membuat kesan memiliki tim besar atau kantor publik. Website ini menampilkan kondisi yang dapat
-            dipertanggungjawabkan: dua pendiri, basis di Semarang, dan layanan yang dijual dengan batas tertulis.
+            dipertanggungjawabkan: satu pendiri, basis di Semarang, dan layanan yang dijual dengan batas tertulis.
           </p>
           <ButtonLink href="/tentang" variant="dark">
             Kenali Asta Tengen
