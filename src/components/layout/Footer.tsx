@@ -7,10 +7,10 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-brand">
-        <Image src="/media/brand/astatengenlogo.svg" width={72} height={72} alt="" />
+        <Image src="/media/brand/logosectorone.svg" width={58} height={66} alt="" />
         <div>
-          <p className="eyebrow">Asta Tengen</p>
-          <h2>Website yang dibuat dengan batas jelas dan arah yang matang.</h2>
+          <p className="eyebrow">Sector One</p>
+          <h2>Website bisnis yang rapi, jelas, dan mudah dihubungi.</h2>
         </div>
       </div>
 
@@ -34,12 +34,12 @@ export function Footer() {
           <h3>Legal</h3>
           <Link href="/kebijakan-privasi">Kebijakan Privasi</Link>
           <Link href="/syarat-layanan">Syarat Layanan</Link>
-          <p>Ikon sosial belum ditampilkan sampai URL resmi tersedia.</p>
+          <p>Media sosial akan ditambahkan setelah kanal resmi siap dipublikasikan.</p>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Asta Tengen.</span>
+        <span>&copy; {new Date().getFullYear()} Sector One.</span>
         <span>Berbasis di Semarang. Melayani seluruh Indonesia.</span>
       </div>
     </footer>

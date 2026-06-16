@@ -5,7 +5,7 @@ export default function NotFound() {
     <section className="page-hero">
       <p className="eyebrow">Tidak ditemukan</p>
       <h1>Halaman yang kamu cari tidak tersedia.</h1>
-      <p>Periksa kembali tautan atau kembali ke beranda Asta Tengen.</p>
+      <p>Periksa kembali tautan atau kembali ke beranda Sector One.</p>
       <Link className="button button-dark" href="/">
         Kembali ke beranda
       </Link>

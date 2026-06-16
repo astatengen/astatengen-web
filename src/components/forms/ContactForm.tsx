@@ -8,12 +8,9 @@ import { getWhatsAppUrl } from "@/content/site";
 type Errors = Partial<Record<"name" | "business" | "whatsapp" | "service" | "budget" | "need" | "privacy", string>>;
 
 const budgetOptions = [
-  "Rp100.000 - Starter Presence",
-  "Rp1.350.000 - Launch Page AI",
-  "Rp2.950.000 - Business Profile AI",
-  "Rp4.750.000 - Product Catalogue AI",
-  "Rp7.750.000 - Commerce AI",
-  "Rp10.000.000 - Signature Build AI",
+  "Rp750.000 - Starter Page",
+  "Rp1.800.000 - Business Profile",
+  "Mulai Rp3.500.000 - Custom Website",
   "Belum yakin, ingin diarahkan",
 ];
 
@@ -31,7 +28,7 @@ export function ContactForm() {
     if (!String(formData.get("whatsapp") ?? "").trim()) nextErrors.whatsapp = "Nomor WhatsApp wajib diisi.";
     if (!String(formData.get("service") ?? "").trim()) nextErrors.service = "Pilih layanan yang diminati.";
     if (!String(formData.get("budget") ?? "").trim()) nextErrors.budget = "Pilih kisaran anggaran.";
-    if (!String(formData.get("need") ?? "").trim()) nextErrors.need = "Ceritakan kebutuhan singkat.";
+    if (!String(formData.get("need") ?? "").trim()) nextErrors.need = "Ceritakan kebutuhan websitemu secara singkat.";
     if (formData.get("privacy") !== "on") {
       nextErrors.privacy = "Persetujuan Kebijakan Privasi wajib dicentang.";
     }
@@ -53,7 +50,7 @@ export function ContactForm() {
     }
 
     const message = [
-      "Halo Asta Tengen, saya ingin konsultasi website.",
+      "Halo Sector One, saya ingin konsultasi website.",
       "",
       `Nama: ${formData.get("name")}`,
       `Nama bisnis: ${formData.get("business")}`,
@@ -64,12 +61,12 @@ export function ContactForm() {
       `Target waktu: ${formData.get("timeline") || "-"}`,
       `Referensi: ${formData.get("reference") || "-"}`,
       "",
-      `Kebutuhan: ${formData.get("need")}`,
+      `Kebutuhan website: ${formData.get("need")}`,
       "",
-      "Saya sudah membaca dan menyetujui Kebijakan Privasi Asta Tengen untuk konsultasi awal.",
+      "Saya sudah membaca dan menyetujui Kebijakan Privasi Sector One untuk konsultasi awal.",
     ].join("\n");
 
-    setNotice("WhatsApp akan terbuka dengan ringkasan kebutuhan. Data belum dikirim lewat website ini.");
+    setNotice("WhatsApp akan terbuka dengan ringkasan kebutuhan. Pesan belum dikirim sampai kamu menekan kirim di WhatsApp.");
     window.open(getWhatsAppUrl(message), "_blank", "noopener,noreferrer");
   }
 
@@ -88,10 +85,10 @@ export function ContactForm() {
       </div>
 
       <Field label="Target waktu" name="timeline" />
-      <Field label="Tautan referensi bila ada" name="reference" />
+      <Field label="Referensi website bila ada" name="reference" />
 
       <label className="field">
-        <span>Kebutuhan singkat</span>
+        <span>Kebutuhan website singkat *</span>
         <textarea name="need" rows={6} aria-invalid={Boolean(errors.need)} aria-describedby={errors.need ? "need-error" : undefined} />
         {errors.need ? <small id="need-error">{errors.need}</small> : null}
       </label>

@@ -9,7 +9,7 @@ import { createMetadata } from "@/lib/metadata";
 const stages = [
   {
     title: "Memahami bisnis",
-    body: "Kami mulai dari kebutuhan, jenis usaha, calon pelanggan, materi yang tersedia, dan batas anggaran. Tahap ini mencegah website dibangun dari asumsi yang kabur.",
+    body: "Proses dimulai dari jenis usaha, calon pelanggan, materi yang tersedia, dan batas anggaran. Tahap ini mencegah website dibangun dari asumsi yang kabur.",
   },
   {
     title: "Menyusun arah",
@@ -17,17 +17,17 @@ const stages = [
   },
   {
     title: "Mendesain dan membangun",
-    body: "Desain dibuat sesuai ruang lingkup paket, lalu diimplementasikan dengan perhatian pada mobile, performa, aksesibilitas, dan SEO dasar.",
+    body: "Desain dibuat sesuai ruang lingkup paket, lalu dibangun dengan perhatian pada mobile, performa, aksesibilitas, dan SEO dasar.",
   },
   {
     title: "Meluncurkan dan mendampingi",
-    body: "Website diluncurkan setelah fungsi utama diuji, pembayaran selesai, materi final siap, dan klien memberi persetujuan.",
+    body: "Website diluncurkan setelah fungsi utama diuji, materi final siap, pembayaran selesai, dan klien memberi persetujuan.",
   },
 ];
 
 export const metadata: Metadata = createMetadata({
   title: "Proses",
-  description: "Proses kerja Asta Tengen dari memahami bisnis hingga peluncuran website.",
+  description: "Proses kerja Sector One dari memahami bisnis hingga peluncuran website.",
   path: "/proses",
 });
 
@@ -48,9 +48,9 @@ export default function ProcessPage() {
           ]}
         />
         <p className="eyebrow">Proses</p>
-        <h1>Proses dibuat jelas agar website tidak terasa seperti proyek yang sulit dikendalikan.</h1>
+        <h1>Proses dibuat jelas agar pengerjaan website tetap terkendali.</h1>
         <p>
-          Halaman ini menjelaskan tanggung jawab, revisi, pembayaran, dan peluncuran dengan bahasa yang mudah dipahami pemilik bisnis.
+          Alur kerja, revisi, pembayaran, dan peluncuran ditulis sejak awal agar keputusan proyek tidak menggantung di tengah jalan.
         </p>
       </section>
 
@@ -67,14 +67,14 @@ export default function ProcessPage() {
       <section className="split-section">
         <div>
           <p className="eyebrow">Tanggung jawab</p>
-          <h2>Asta Tengen menjaga struktur kerja. Klien menjaga kebenaran materi bisnis.</h2>
+          <h2>Sector One menjaga struktur kerja. Klien menjaga kebenaran informasi bisnis.</h2>
         </div>
         <div className="two-column-copy">
           <div>
-            <h3>Asta Tengen</h3>
+            <h3>Sector One</h3>
             <ul>
-              <li>menyusun struktur halaman dan desain sesuai paket</li>
-              <li>mengimplementasikan website dan fungsi utama</li>
+              <li>menyusun struktur halaman sesuai paket</li>
+              <li>mendesain dan membangun website</li>
               <li>menjaga performa, responsif, aksesibilitas, dan SEO dasar</li>
               <li>memberi ruang revisi sesuai batas paket</li>
             </ul>
@@ -104,7 +104,7 @@ export default function ProcessPage() {
 
       <section className="final-cta">
         <h2>Ingin tahu proses yang cocok untuk kebutuhanmu?</h2>
-        <p>Kirim kebutuhan awal lewat WhatsApp. Kami akan bantu mengarahkannya ke paket yang paling masuk akal.</p>
+        <p>Kirim kebutuhan awal lewat WhatsApp. Sector One akan bantu arahkan ke ruang lingkup yang paling masuk akal.</p>
         <a className="button button-dark" href={getWhatsAppUrl()}>
           Konsultasikan Website
         </a>

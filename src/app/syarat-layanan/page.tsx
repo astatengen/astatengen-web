@@ -8,7 +8,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Syarat Layanan",
-  description: "Syarat Layanan Asta Tengen yang berlaku sejak 14 Juni 2026.",
+  description: "Syarat Layanan Sector One yang berlaku sejak 14 Juni 2026.",
   path: "/syarat-layanan",
 });
 

@@ -33,12 +33,12 @@ export type ServicePackage = {
 export type PortfolioProject = {
   slug: string;
   name: string;
-  label: "Website Live";
+  label: string;
   projectType: string;
   industry: string;
   service: string;
   year: string;
-  liveUrl: string;
+  liveUrl?: string;
   summary: string;
   problem: string;
   goal: string;

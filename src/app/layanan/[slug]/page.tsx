@@ -20,14 +20,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!service) {
     return createMetadata({
       title: "Layanan tidak ditemukan",
-      description: "Layanan Asta Tengen tidak ditemukan.",
+      description: "Layanan Sector One tidak ditemukan.",
       path: "/layanan",
     });
   }
 
   return createMetadata({
     title: service.name,
-    description: `${service.name} dari Asta Tengen mulai ${service.price}. ${service.summary}`,
+    description: `${service.name} dari Sector One mulai ${service.price}. ${service.summary}`,
     path: `/layanan/${service.slug}`,
   });
 }
@@ -64,7 +64,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       <section className="detail-layout">
         <aside className="price-panel">
-          <p className="eyebrow">Mulai dari</p>
+          <p className="eyebrow">Harga mulai</p>
           <strong>{service.price}</strong>
           <dl>
             <div>
@@ -84,14 +84,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               <dd>{service.renewal}</dd>
             </div>
           </dl>
-          <a className="button button-primary" href={getWhatsAppUrl(`Halo Asta Tengen, saya ingin konsultasi paket ${service.name}.`)}>
+          <a className="button button-primary" href={getWhatsAppUrl(`Halo Sector One, saya ingin konsultasi paket ${service.name}.`)}>
             Konsultasikan paket ini
           </a>
         </aside>
 
         <div className="detail-content">
           <section>
-            <h2>Cakupan awal</h2>
+            <h2>Yang termasuk</h2>
             <ul className="check-list">
               {service.includes.map((item) => (
                 <li key={item}>{item}</li>
@@ -100,7 +100,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           </section>
 
           <section>
-            <h2>Domain, hosting, dan AI</h2>
+            <h2>Domain, hosting, dan dukungan</h2>
             <p>{service.domainHosting}</p>
             <p>{service.assistLimit}</p>
             <p>{service.assistActive}</p>
@@ -110,7 +110,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           </section>
 
           <section>
-            <h2>Batas dan catatan</h2>
+            <h2>Batas pekerjaan</h2>
             <ul>
               {service.constraints.map((item) => (
                 <li key={item}>{item}</li>
@@ -119,7 +119,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           </section>
 
           <section>
-            <h2>Estimasi dimulai setelah</h2>
+            <h2>Estimasi berjalan setelah</h2>
             <ul>
               {serviceNotes.estimateStartsAfter.map((item) => (
                 <li key={item}>{item}</li>
@@ -128,7 +128,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           </section>
 
           <section>
-            <h2>Revisi Asta Assist</h2>
+            <h2>Ketentuan revisi</h2>
             <div className="two-column-copy">
               <div>
                 <h3>Mencakup</h3>

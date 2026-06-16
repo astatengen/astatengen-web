@@ -1,21 +1,21 @@
 export const siteConfig = {
-  name: "Asta Tengen",
-  tagline: "Website terjangkau untuk usaha yang ingin terlihat serius.",
+  name: "Sector One",
+  tagline: "Website bisnis yang rapi, jelas, dan mudah dihubungi.",
   description:
-    "Asta Tengen merancang dan membangun website yang rapi, cepat, dan mudah digunakan untuk usaha kecil, bisnis lokal, dan profesional yang ingin mulai tampil lebih serius dengan anggaran realistis.",
+    "Sector One membantu bisnis lokal mengubah informasi layanan, harga, lokasi, dan alur kontak menjadi website yang rapi, jelas, dan siap dibagikan ke calon pelanggan.",
   location: "Semarang, Jawa Tengah, Indonesia",
   email: "ggbanget2023@gmail.com",
   whatsappDisplay: "+62 878-1627-0140",
   whatsappNumber: "6287816270140",
   hours:
-    "WhatsApp menerima pesan selama 24 jam. Pesan ditangani berdasarkan antrean dan ketersediaan tim.",
+    "Pesan WhatsApp dapat dikirim kapan saja dan dibalas berdasarkan antrean.",
   founders: [
     {
       name: "Achmad Roychan",
-      role: "Pendiri / Web Designer & Frontend",
+      role: "Founder / Web Designer & Frontend Developer",
       image: "/media/people/roychan.jpeg",
-      alt: "Potret Achmad Roychan, pendiri Asta Tengen.",
-      note: "Mendirikan dan menjalankan Asta Tengen secara solo, dengan fokus pada arah visual, struktur halaman, implementasi frontend, dan kesiapan peluncuran.",
+      alt: "Potret Achmad Roychan, pendiri Sector One.",
+      note: "Mengurus struktur konten, arah visual, copywriting, dan implementasi frontend.",
     },
   ],
 };
@@ -44,7 +44,7 @@ export const publicRoutes = [
 export function getWhatsAppUrl(message?: string) {
   const text =
     message ??
-    "Halo Asta Tengen, saya ingin konsultasi tentang kebutuhan website untuk bisnis saya.";
+    "Halo Sector One, saya ingin konsultasi tentang kebutuhan website untuk bisnis saya.";
 
   return `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(text)}`;
 }

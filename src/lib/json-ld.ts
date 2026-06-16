@@ -8,7 +8,7 @@ export function organizationJsonLd() {
     "@type": "Organization",
     name: siteConfig.name,
     url: absoluteUrl("/"),
-    logo: absoluteUrl("/media/brand/astatengenlogo.svg"),
+    logo: absoluteUrl("/media/brand/logosectorone.svg"),
     email: siteConfig.email,
     contactPoint: [
       {

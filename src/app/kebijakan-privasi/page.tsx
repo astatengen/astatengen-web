@@ -8,7 +8,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Kebijakan Privasi",
-  description: "Kebijakan Privasi Asta Tengen yang berlaku sejak 14 Juni 2026.",
+  description: "Kebijakan Privasi Sector One yang berlaku sejak 14 Juni 2026.",
   path: "/kebijakan-privasi",
 });
 

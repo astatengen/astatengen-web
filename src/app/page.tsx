@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
 
-import { AbstractPanel } from "@/components/AbstractPanel";
 import { ButtonLink } from "@/components/ButtonLink";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
@@ -12,9 +11,71 @@ import { services } from "@/content/services";
 import { getWhatsAppUrl, siteConfig } from "@/content/site";
 import { organizationJsonLd, servicesJsonLd } from "@/lib/json-ld";
 
-const starterService = services.find((service) => service.slug === "starter-presence") ?? services[0];
-const launchAiService = services.find((service) => service.slug === "launch-page-ai") ?? services[1];
-const profileAiService = services.find((service) => service.slug === "business-profile-ai") ?? services[2];
+const starterService = services.find((service) => service.slug === "starter-page") ?? services[0];
+const profileService = services.find((service) => service.slug === "business-profile") ?? services[1];
+const customService = services.find((service) => service.slug === "custom-website") ?? services[2];
+const featuredProject = projects[0];
+const founder = siteConfig.founders[0];
+
+const problemPoints = [
+  {
+    title: "Informasi penting sulit ditemukan",
+    body: "Harga, jam buka, lokasi, dan cara pesan sering tersebar di chat, media sosial, atau foto brosur yang cepat tenggelam.",
+  },
+  {
+    title: "Calon pelanggan butuh alasan untuk percaya",
+    body: "Sebelum menghubungi WhatsApp, orang ingin melihat usaha yang aktif, jelas, dan punya informasi dasar yang bisa dicek.",
+  },
+  {
+    title: "Link yang berantakan menurunkan minat",
+    body: "Halaman yang terlalu penuh, lambat, atau tidak nyaman di ponsel membuat pengunjung pergi sebelum memahami penawaran.",
+  },
+];
+
+const solutionPoints = [
+  "alur halaman disusun dari kebutuhan pelanggan, bukan dari template kosong",
+  "copy dibuat singkat, jelas, dan sesuai karakter usaha",
+  "tampilan diuji di desktop dan ponsel sebelum rilis",
+  "CTA WhatsApp ditempatkan setelah informasi penting terbaca",
+];
+
+const processSteps = [
+  {
+    title: "Pahami bisnis",
+    body: "Jenis usaha, layanan utama, harga, area, dan karakter pelanggan diringkas agar arah halaman tidak kabur.",
+  },
+  {
+    title: "Susun konten",
+    body: "Materi dipilih, diedit, dan disusun menjadi alur yang mudah dipindai oleh calon pelanggan.",
+  },
+  {
+    title: "Desain dan bangun",
+    body: "Tampilan dibuat sesuai konteks bisnis, lalu diimplementasikan menjadi website yang responsif.",
+  },
+  {
+    title: "Review dan rilis",
+    body: "Teks, tombol, tautan WhatsApp, metadata, dan tampilan ponsel dicek sebelum website dipublikasikan.",
+  },
+];
+
+const faqs = [
+  {
+    question: "Apakah cocok untuk bisnis kecil?",
+    answer: "Cocok. Paket awal dibuat untuk usaha lokal yang butuh halaman resmi tanpa ruang lingkup berlebihan.",
+  },
+  {
+    question: "Apakah harus punya materi lengkap?",
+    answer: "Tidak harus sempurna. Minimal siapkan layanan utama, harga dasar, kontak, lokasi, dan foto yang boleh digunakan.",
+  },
+  {
+    question: "Apakah langsung diarahkan ke WhatsApp?",
+    answer: "Ya. Tombol kontak dapat membuka WhatsApp dengan pesan awal yang lebih rapi untuk memulai percakapan.",
+  },
+  {
+    question: "Siapa yang mengerjakan website?",
+    answer: "Pengerjaan ditangani langsung oleh Achmad Roychan, founder Sector One, agar komunikasi dan keputusan desain lebih ringkas.",
+  },
+];
 
 export default function HomePage() {
   return (
@@ -22,108 +83,157 @@ export default function HomePage() {
       <JsonLd data={organizationJsonLd()} />
       <JsonLd data={servicesJsonLd()} />
 
-      <section className="hero-section dark-section">
-        <div className="hero-media">
-          <AbstractPanel tone="dark" label="Asta Tengen" />
-        </div>
+      <section className="hero-section">
+        <Image
+          className="hero-backdrop-image"
+          src={featuredProject.screenshots[0].src}
+          alt=""
+          fill
+          sizes="100vw"
+          priority
+        />
+        <div className="hero-shade" aria-hidden="true" />
+
         <div className="hero-content">
           <Reveal>
-            <p className="eyebrow">{siteConfig.tagline}</p>
-            <h1>Website rapi untuk usaha kecil, mulai Rp100.000.</h1>
+            <h1>Website bisnis yang rapi dan jelas.</h1>
           </Reveal>
           <Reveal delay={0.08}>
             <p className="hero-copy">
-              Asta Tengen membantu usaha kecil, mikro, dan bisnis lokal tampil lebih serius dengan website yang jelas, ringan, dan sesuai
-              kebutuhan. Mulai dari presence sederhana sampai website dengan Asta Assist.
+              Sector One membantu usaha lokal menata layanan, harga, lokasi, dan jalur kontak menjadi website yang mudah
+              dibaca, layak dibagikan, dan siap dibuka dari ponsel.
             </p>
           </Reveal>
           <Reveal className="hero-actions" delay={0.14}>
-            <a className="button button-primary" href={getWhatsAppUrl("Halo Asta Tengen, saya ingin bahas paket website mulai Rp100.000.")}>
-              Bahas Paket Rp100.000
+            <a
+              className="button button-primary"
+              href={getWhatsAppUrl("Halo Sector One, saya ingin konsultasi tentang kebutuhan website untuk bisnis saya.")}
+            >
+              Konsultasi via WhatsApp
             </a>
-            <ButtonLink href={`/layanan/${launchAiService.slug}`} variant="light">
-              Lihat Paket AI
+            <ButtonLink href="/proyek" variant="light">
+              Lihat Studi Konsep
             </ButtonLink>
-            <p>
-              Starter Presence cocok untuk mulai tampil online. Paket AI masuk ketika bisnis perlu landing page atau profil yang lebih
-              lengkap dengan Asta Assist.
-            </p>
+          </Reveal>
+          <Reveal delay={0.18}>
+            <ul className="hero-facts" aria-label="Ringkasan Sector One">
+              <li>Mulai Rp299.000</li>
+              <li>Dikerjakan langsung oleh founder</li>
+              <li>Fokus bisnis lokal dan jasa</li>
+            </ul>
           </Reveal>
         </div>
       </section>
 
       <section className="statement-section">
-        <Reveal className="section-kicker">
-          <p className="eyebrow">Posisi kami</p>
-        </Reveal>
         <div className="statement-grid">
           <Reveal>
-            <h2>Website yang baik tidak harus terasa rumit, dan harga yang jelas tidak harus mengorbankan arah desain.</h2>
+            <p className="eyebrow">Masalah umum</p>
+            <h2>Website yang baik tidak perlu ramai. Yang penting pengunjung cepat paham.</h2>
           </Reveal>
-          <Reveal delay={0.1}>
+          <Reveal delay={0.08}>
             <p>
-              Fokus kami bukan membuat website terasa mahal. Fokusnya adalah membuat usaha terlihat tertata, informasinya mudah dipahami,
-              dan calon pelanggan tahu langkah berikutnya.
+              Untuk usaha kecil, website seharusnya menjawab pertanyaan dasar calon pelanggan: apa yang dijual,
+              berapa kisarannya, di mana lokasinya, dan bagaimana cara menghubungi.
             </p>
           </Reveal>
         </div>
-      </section>
 
-      <section className="offer-ladder-section">
-        <div className="section-heading">
-          <p className="eyebrow">Cara memilih</p>
-          <h2>Mulai dari yang cukup dulu, naik saat butuh fitur lebih.</h2>
-          <p>
-            Harga dibuat berjenjang supaya usaha kecil tetap bisa mulai. Starter menjaga biaya masuk tetap rendah, sedangkan paket AI
-            memberi ruang untuk desain, domain, hosting, dan Asta Assist.
-          </p>
-        </div>
-        <div className="offer-ladder">
-          <Reveal className="offer-card offer-card-entry">
-            <p className="eyebrow">Pintu masuk</p>
-            <h3>{starterService.name}</h3>
-            <strong>{starterService.price}</strong>
-            <p>{starterService.summary}</p>
-            <ul>
-              <li>Satu halaman sederhana</li>
-              <li>Subdomain Asta Tengen</li>
-              <li>Tanpa Asta Assist</li>
-            </ul>
-            <ButtonLink href={`/layanan/${starterService.slug}`} variant="ghost">
-              Detail Starter
-            </ButtonLink>
-          </Reveal>
-          <Reveal className="offer-card offer-card-ai" delay={0.08}>
-            <p className="eyebrow">Naik kelas</p>
-            <h3>{launchAiService.name}</h3>
-            <strong>{launchAiService.price}</strong>
-            <p>
-              Paket awal untuk website dengan Asta Assist, domain .com, hosting, SSL, SEO dasar, dan struktur halaman yang lebih matang.
-            </p>
-            <ul>
-              <li>Untuk promosi produk, jasa, acara, kelas, atau kampanye</li>
-              <li>Asta Assist sesuai batas paket</li>
-              <li>Jalur upgrade menuju {profileAiService.name}</li>
-            </ul>
-            <ButtonLink href={`/layanan/${launchAiService.slug}`} variant="dark">
-              Lihat Paket AI
-            </ButtonLink>
-          </Reveal>
+        <div className="problem-grid">
+          {problemPoints.map((point, index) => (
+            <Reveal key={point.title} className="plain-card" delay={index * 0.04}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{point.title}</h3>
+              <p>{point.body}</p>
+            </Reveal>
+          ))}
         </div>
       </section>
 
-      <section className="projects-section dark-section">
-        <div className="section-heading">
-          <p className="eyebrow">Portofolio</p>
-          <h2>Proyek live yang menunjukkan cara Asta Tengen menyusun website bisnis.</h2>
+      <section className="split-section solution-section">
+        <div>
+          <p className="eyebrow">Pendekatan</p>
+          <h2>Isi bisnis dirapikan dulu sebelum masuk ke desain.</h2>
+        </div>
+        <div className="check-list-panel">
           <p>
-            Portofolio ini berisi website live untuk usaha lokal, dari jasa laundry sampai jajanan tradisional, dengan struktur informasi
-            yang jelas dan jalur WhatsApp yang mudah ditemukan.
+            Website yang layak rilis dimulai dari informasi yang benar. Setelah itu baru visual, komposisi, dan detail responsifnya diselesaikan.
+          </p>
+          <ul>
+            {solutionPoints.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="service-section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Layanan</p>
+            <h2>Pilih paket sesuai kebutuhan sekarang.</h2>
+          </div>
+          <p>
+            Paket dibuat bertahap agar usaha kecil bisa mulai dari halaman sederhana, lalu naik saat kebutuhan kontennya bertambah.
           </p>
         </div>
+        <ServiceJourney />
+      </section>
+
+      <section className="operator-section">
+        <div className="operator-copy">
+          <p className="eyebrow">Dikelola satu orang</p>
+          <h2>Komunikasi langsung dengan orang yang mengerjakan.</h2>
+          <p>
+            Sector One dikelola oleh Achmad Roychan. Brief, arah visual, copywriting, dan implementasi frontend ditangani
+            langsung agar keputusan lebih ringkas dan mudah dilacak.
+          </p>
+        </div>
+        <article className="founder-mini">
+          <Image src={founder.image} alt={founder.alt} width={96} height={96} />
+          <div>
+            <h3>{founder.name}</h3>
+            <p>{founder.role}</p>
+            <p>{founder.note}</p>
+          </div>
+        </article>
+      </section>
+
+      <section className="process-preview">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Proses</p>
+            <h2>Alur kerja dibuat jelas agar proyek tidak melebar diam-diam.</h2>
+          </div>
+          <p>
+            Setiap tahap punya keputusan yang perlu disepakati sebelum lanjut ke tahap berikutnya.
+          </p>
+        </div>
+        <div className="process-grid">
+          {processSteps.map((step, index) => (
+            <Reveal key={step.title} className="process-step" delay={index * 0.04}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{step.title}</h3>
+              <p>{step.body}</p>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="projects-section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Studi konsep</p>
+            <h2>Contoh struktur website untuk usaha lokal.</h2>
+          </div>
+          <p>
+            Studi konsep berikut memperlihatkan bagaimana informasi bisnis bisa diubah menjadi halaman yang mudah dibaca dan mudah dihubungi.
+          </p>
+        </div>
+
         <div className="project-feature-grid">
           {projects.map((project, index) => (
-            <Reveal key={project.slug} className={index === 0 ? "project-tile project-tile-large" : "project-tile"} delay={index * 0.06}>
+            <Reveal key={project.slug} className={index === 0 ? "project-tile project-tile-large" : "project-tile"} delay={index * 0.05}>
               <Link href={`/proyek/${project.slug}`}>
                 <div className="project-preview" style={{ "--accent": project.palette[2] } as CSSProperties}>
                   <Image
@@ -131,13 +241,12 @@ export default function HomePage() {
                     alt={project.screenshots[0].alt}
                     width={project.screenshots[0].width}
                     height={project.screenshots[0].height}
-                    sizes="(max-width: 720px) 100vw, 55vw"
+                    sizes="(max-width: 720px) 100vw, 50vw"
                   />
                   <span>{project.label}</span>
                 </div>
                 <div className="project-meta">
                   <span>{project.industry}</span>
-                  <span>{project.projectType}</span>
                   <span>{project.service}</span>
                 </div>
                 <h3>{project.name}</h3>
@@ -148,96 +257,66 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="service-section">
+      <section className="offer-ladder-section">
         <div className="section-heading">
-          <p className="eyebrow">Layanan</p>
-          <h2>Mulai dari presence sederhana sampai website custom dengan Asta Assist.</h2>
-          <p>Paket dibuat berjenjang agar calon klien memahami batas pekerjaan, biaya tahunan, revisi, dan masa garansi sejak awal.</p>
+          <div>
+            <p className="eyebrow">Harga</p>
+            <h2>Paket awal dengan batas kerja yang jelas.</h2>
+          </div>
+          <p>
+            Harga final mengikuti jumlah halaman, materi, aset, dan fitur yang benar-benar dibutuhkan.
+          </p>
         </div>
-        <ServiceJourney />
-      </section>
 
-      <section className="process-preview dark-section">
-        <div className="section-heading">
-          <p className="eyebrow">Proses</p>
-          <h2>Empat tahap yang menjaga proyek tetap jelas.</h2>
-        </div>
-        <div className="process-grid">
-          {["Memahami bisnis", "Menyusun arah", "Mendesain dan membangun", "Meluncurkan dan mendampingi"].map((item, index) => (
-            <Reveal key={item} className="process-step" delay={index * 0.05}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <h3>{item}</h3>
-              <p>
-                {index === 0
-                  ? "Kebutuhan, batas anggaran, materi, dan tujuan diperjelas sebelum pengerjaan dimulai."
-                  : index === 1
-                    ? "Struktur halaman, prioritas informasi, dan arah visual ditentukan agar website tidak hanya terlihat ramai."
-                    : index === 2
-                      ? "Desain dan implementasi berjalan dengan kontrol ruang lingkup, revisi, dan kesiapan mobile."
-                      : "Peluncuran dilakukan setelah pemeriksaan fungsi utama, pembayaran, dan persetujuan final."}
-              </p>
+        <div className="offer-ladder">
+          {[starterService, profileService, customService].map((service) => (
+            <Reveal key={service.slug} className={service.slug === "business-profile" ? "offer-card featured" : "offer-card"}>
+              <p className="eyebrow">{service.slug === "business-profile" ? "Paling fleksibel" : "Paket"}</p>
+              <h3>{service.name}</h3>
+              <strong>{service.price}</strong>
+              <p>{service.summary}</p>
+              <ul>
+                {service.includes.slice(0, 4).map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+                <li>Estimasi: {service.estimate}</li>
+              </ul>
+              <ButtonLink href={`/layanan/${service.slug}`} variant={service.slug === "business-profile" ? "dark" : "ghost"}>
+                Detail Paket
+              </ButtonLink>
             </Reveal>
           ))}
         </div>
       </section>
 
-      <section className="audience-section">
-        <Reveal>
-          <h2>Dibuat untuk usaha yang ingin tampil lebih serius tanpa merasa harus langsung menjadi perusahaan besar.</h2>
-        </Reveal>
-        <div className="audience-list">
-          {["Warung makan", "Laundry", "Barbershop", "Klinik kecil", "Jasa profesional", "Produk lokal"].map((item) => (
-            <span key={item}>{item}</span>
+      <section className="faq-section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">FAQ</p>
+            <h2>Pertanyaan yang biasanya muncul di awal.</h2>
+          </div>
+        </div>
+        <div className="faq-grid">
+          {faqs.map((item) => (
+            <article key={item.question}>
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </article>
           ))}
-        </div>
-      </section>
-
-      <section className="price-intro">
-        <div>
-          <p className="eyebrow">Harga</p>
-          <h2>Kebutuhan yang berbeda membutuhkan ruang kerja yang berbeda.</h2>
-        </div>
-        <div>
-          <p>
-            Paket dimulai dari <strong>{services[0].price}</strong> untuk presence paling sederhana hingga{" "}
-            <strong>{services[services.length - 1].price}</strong> untuk website custom.
-          </p>
-          <ButtonLink href="/harga" variant="dark">
-            Lihat rincian harga
-          </ButtonLink>
-        </div>
-      </section>
-
-      <section className="about-preview">
-        <div className="founder-strip" aria-label="Pendiri Asta Tengen">
-          {siteConfig.founders.map((founder) => (
-            <figure key={founder.name}>
-              <Image src={founder.image} alt={founder.alt} width={540} height={720} />
-              <figcaption>
-                <strong>{founder.name}</strong>
-                <span>{founder.role}</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-        <div>
-          <p className="eyebrow">Tentang</p>
-          <h2>Agensi solo yang dibangun dengan batas kerja yang jelas.</h2>
-          <p>
-            Asta Tengen tidak membuat kesan memiliki tim besar atau kantor publik. Website ini menampilkan kondisi yang dapat
-            dipertanggungjawabkan: satu pendiri, basis di Semarang, dan layanan yang dijual dengan batas tertulis.
-          </p>
-          <ButtonLink href="/tentang" variant="dark">
-            Kenali Asta Tengen
-          </ButtonLink>
         </div>
       </section>
 
       <section className="final-cta">
-        <h2>Punya bisnis yang perlu terlihat lebih serius?</h2>
-        <p>Ceritakan kebutuhanmu. Kami akan membantu menentukan bentuk website yang paling masuk akal.</p>
-        <a className="button button-dark" href={getWhatsAppUrl()}>
-          Konsultasikan Website
+        <p className="eyebrow">Mulai dari brief singkat</p>
+        <h2>Ceritakan bisnismu, nanti arahnya dirapikan.</h2>
+        <p>
+          Kirim jenis usaha, layanan utama, kisaran anggaran, dan target waktu. Sector One akan bantu pilih ruang lingkup yang paling masuk akal.
+        </p>
+        <a
+          className="button button-dark"
+          href={getWhatsAppUrl("Halo Sector One, saya ingin konsultasi awal tentang pembuatan website bisnis saya.")}
+        >
+          Konsultasi via WhatsApp
         </a>
       </section>
     </>

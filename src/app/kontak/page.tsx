@@ -9,7 +9,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Kontak",
-  description: "Konsultasikan kebutuhan website dengan Asta Tengen melalui WhatsApp.",
+  description: "Konsultasikan kebutuhan website dengan Sector One melalui WhatsApp.",
   path: "/kontak",
 });
 
@@ -31,9 +31,9 @@ export default function ContactPage() {
           ]}
         />
         <p className="eyebrow">Kontak</p>
-        <h1>Ceritakan kebutuhan website yang sedang kamu pikirkan.</h1>
+        <h1>Ceritakan kebutuhan website yang ingin kamu rapikan.</h1>
         <p>
-          Formulir ini tidak menyimpan data ke backend. Setelah validasi, ringkasan kebutuhan akan dibuka sebagai pesan WhatsApp.
+          Isi formulir singkat ini untuk menyusun pesan awal. Setelah validasi, ringkasannya akan dibuka di WhatsApp dan belum tersimpan ke backend.
         </p>
       </section>
 
@@ -44,7 +44,7 @@ export default function ContactPage() {
           <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
           <p>{siteConfig.location}</p>
           <p>{siteConfig.hours}</p>
-          <p>Asta Tengen belum memiliki alamat kantor yang dibuka untuk kunjungan publik.</p>
+          <p>Sector One belum memiliki alamat kantor yang dibuka untuk kunjungan publik.</p>
         </div>
         <ContactForm />
       </section>
@@ -55,8 +55,8 @@ export default function ContactPage() {
           <p>Tidak. Pilih opsi belum yakin jika kebutuhan masih perlu diarahkan.</p>
         </article>
         <article>
-          <h2>Apakah konsultasi sepenuhnya lewat WhatsApp?</h2>
-          <p>Untuk tahap v1, ya. Integrasi lain dapat ditambahkan setelah endpoint dipilih.</p>
+          <h2>Apakah konsultasi lewat WhatsApp?</h2>
+          <p>Ya. Konsultasi awal dilakukan lewat WhatsApp agar kebutuhan bisa dibahas langsung dan terdokumentasi.</p>
         </article>
         <article>
           <h2>Apakah form ini mengirim data otomatis?</h2>

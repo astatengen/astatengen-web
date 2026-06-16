@@ -10,9 +10,11 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Tentang",
-  description: "Asta Tengen adalah agensi website solo dari Semarang yang didirikan dan dijalankan oleh Achmad Roychan.",
+  description: "Sector One adalah studio pembuatan website dari Semarang yang didirikan dan dijalankan oleh Achmad Roychan.",
   path: "/tentang",
 });
+
+const founder = siteConfig.founders[0];
 
 export default function AboutPage() {
   return (
@@ -32,35 +34,33 @@ export default function AboutPage() {
           ]}
         />
         <p className="eyebrow">Tentang</p>
-        <h1>Studio kecil dari Semarang yang dibangun dengan batas kerja yang jelas.</h1>
+        <h1>Studio kecil dari Semarang yang dikelola langsung oleh founder.</h1>
         <p>
-          Asta Tengen didirikan dan dijalankan secara solo oleh Achmad Roychan. Website ini tidak menampilkan kantor, dokumentasi kerja,
-          atau anggota tim tambahan yang belum tersedia sebagai bagian nyata dari agensi.
+          Sector One dijalankan oleh Achmad Roychan untuk membantu usaha lokal punya website yang jelas,
+          mudah dibaca, dan tidak dibangun dari klaim berlebihan.
         </p>
       </section>
 
       <section className="founder-section">
-        {siteConfig.founders.map((founder) => (
-          <article key={founder.name} className="founder-profile">
-            <Image src={founder.image} alt={founder.alt} width={720} height={960} />
-            <div>
-              <p className="eyebrow">Pendiri</p>
-              <h2>{founder.name}</h2>
-              <p>{founder.role}</p>
-              <p>{founder.note}</p>
-            </div>
-          </article>
-        ))}
+        <article className="founder-profile">
+          <Image src={founder.image} alt={founder.alt} width={96} height={96} />
+          <div>
+            <p className="eyebrow">Founder</p>
+            <h2>{founder.name}</h2>
+            <p>{founder.role}</p>
+            <p>{founder.note}</p>
+          </div>
+        </article>
       </section>
 
       <section className="split-section dark-section">
         <div>
           <p className="eyebrow">Cara berpikir</p>
-          <h2>Desain yang baik harus membantu pemilik bisnis menjelaskan dirinya dengan lebih tenang.</h2>
+          <h2>Website harus membantu bisnis menjelaskan dirinya dengan tenang.</h2>
         </div>
         <p>
-          Asta Tengen tidak menjual kesan mewah berlebihan. Kami memilih struktur yang mudah dipahami, harga yang tertulis, dan jalur
-          konsultasi yang langsung menuju WhatsApp.
+          Sector One tidak menjual kesan besar yang dibuat-buat. Fokusnya adalah struktur informasi,
+          tampilan yang rapi, batas kerja yang tertulis, dan jalur konsultasi yang langsung menuju WhatsApp.
         </p>
       </section>
 
@@ -70,8 +70,8 @@ export default function AboutPage() {
             <h2>{value}</h2>
             <p>
               {value === "Kejujuran"
-                ? "Tidak ada klaim klien, testimoni, kantor, atau hasil bisnis yang belum dapat dibuktikan."
-                : "Nilai ini diterapkan melalui batas paket, struktur kerja, dan komunikasi yang ditulis sejak awal."}
+                ? "Tidak ada klaim klien, testimoni, kantor, atau hasil bisnis yang belum bisa dibuktikan."
+                : "Nilai ini diterapkan lewat batas paket, struktur kerja, dan komunikasi yang ditulis sejak awal."}
             </p>
           </article>
         ))}

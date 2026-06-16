@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!project) {
     return createMetadata({
       title: "Proyek tidak ditemukan",
-      description: "Proyek Asta Tengen tidak ditemukan.",
+      description: "Studi konsep Sector One tidak ditemukan.",
       path: "/proyek",
     });
   }
@@ -135,7 +135,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </ul>
         </article>
         <article>
-          <h2>Scope pekerjaan</h2>
+          <h2>Ruang lingkup</h2>
           <ul>
             {project.scope.map((item) => (
               <li key={item}>{item}</li>
@@ -151,7 +151,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </ul>
         </article>
         <article>
-          <h2>Stack teknis</h2>
+          <h2>Teknologi</h2>
           <ul>
             {project.stack.map((item) => (
               <li key={item}>{item}</li>
@@ -165,10 +165,13 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       </section>
 
       <section className="case-actions">
-        <a className="button button-dark" href={project.liveUrl} target="_blank" rel="noreferrer">
-          Buka website live
-        </a>
+        {project.liveUrl ? (
+          <a className="button button-dark" href={project.liveUrl} target="_blank" rel="noreferrer">
+            Buka website live
+          </a>
+        ) : null}
         <Link href="/kontak">Buat website untuk usahamu</Link>
+        <Link href="/proyek">Lihat studi konsep lain</Link>
       </section>
     </>
   );

@@ -13,7 +13,7 @@ export function ServiceJourney() {
 
   return (
     <div className="service-journey">
-      <div className="service-list" role="list" aria-label="Daftar layanan Asta Tengen">
+      <div className="service-list" role="list" aria-label="Daftar layanan Sector One">
         {services.map((service, index) => (
           <button
             key={service.slug}

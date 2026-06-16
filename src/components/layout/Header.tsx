@@ -35,9 +35,9 @@ export function Header() {
 
   return (
     <header className="site-header">
-      <Link className="brand-lockup" href="/" aria-label="Asta Tengen beranda">
-        <Image src="/media/brand/astatengenlogo.svg" width={44} height={44} alt="" priority />
-        <span>Asta Tengen</span>
+      <Link className="brand-lockup" href="/" aria-label="Sector One beranda">
+        <Image src="/media/brand/logosectorone.svg" width={40} height={45} alt="" priority />
+        <span>Sector One</span>
       </Link>
 
       <nav className="desktop-nav" aria-label="Navigasi utama">
@@ -78,7 +78,7 @@ export function Header() {
             transition={{ duration: 0.2 }}
           >
             <div className="mobile-menu-top">
-              <span>Asta Tengen</span>
+              <span>Sector One</span>
               <button ref={closeButtonRef} type="button" onClick={() => setOpen(false)}>
                 Tutup
               </button>

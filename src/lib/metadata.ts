@@ -10,7 +10,7 @@ type MetadataInput = {
   image?: string;
 };
 
-export function createMetadata({ title, description, path = "/", image = "/media/brand/logoastatengen.png" }: MetadataInput): Metadata {
+export function createMetadata({ title, description, path = "/", image = "/media/brand/logosectorone.svg" }: MetadataInput): Metadata {
   const fullTitle = title === siteConfig.name ? title : `${title} | ${siteConfig.name}`;
   const url = absoluteUrl(path);
   const imageUrl = absoluteUrl(image);
@@ -34,7 +34,7 @@ export function createMetadata({ title, description, path = "/", image = "/media
           url: imageUrl,
           width: 1254,
           height: 1254,
-          alt: "Logo Asta Tengen.",
+          alt: "Logo Sector One.",
         },
       ],
     },

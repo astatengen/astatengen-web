@@ -10,7 +10,7 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Harga",
-  description: "Daftar harga website Asta Tengen mulai Rp100.000, termasuk biaya tahunan, revisi, garansi, dan batas Asta Assist.",
+  description: "Daftar harga website Sector One mulai Rp750.000, termasuk biaya tahunan, revisi, garansi, dan dukungan teknis.",
   path: "/harga",
 });
 
@@ -32,10 +32,10 @@ export default function PricingPage() {
           ]}
         />
         <p className="eyebrow">Harga</p>
-        <h1>Mulai ringan, lalu naik ketika bisnis butuh fitur lebih.</h1>
+        <h1>Harga dibuat bertahap agar bisnis bisa mulai dari kebutuhan utama.</h1>
         <p>
-          Harga berikut bersumber dari dokumen layanan Asta Tengen. Starter menjaga biaya masuk tetap rendah, sedangkan paket AI mencakup
-          ruang kerja, domain, hosting, dan Asta Assist sesuai batas tertulis.
+          Tidak semua bisnis perlu website besar sejak awal. Pilih paket yang cukup untuk kebutuhan sekarang,
+          lalu kembangkan saat informasi, cabang, atau fitur bisnis mulai bertambah.
         </p>
       </section>
 
@@ -78,19 +78,19 @@ export default function PricingPage() {
       <section className="split-section">
         <div>
           <p className="eyebrow">Harga dan kualitas</p>
-          <h2>Starter dibuat hemat. Paket AI dibuat untuk pekerjaan yang lebih lengkap.</h2>
+          <h2>Harga mengikuti kedalaman konten dan kompleksitas pengerjaan.</h2>
         </div>
         <ul>
-          <li>Starter Presence cocok untuk usaha yang baru perlu tampil online dengan satu halaman sederhana.</li>
-          <li>Paket AI cocok ketika bisnis perlu domain, hosting, desain lebih matang, dan Asta Assist.</li>
-          <li>Semakin tinggi paket, semakin luas ruang desain, jumlah halaman, revisi, garansi, dan dukungan teknisnya.</li>
+          <li>Starter Page cocok untuk usaha yang baru perlu tampil online dengan satu halaman sederhana.</li>
+          <li>Business Profile cocok ketika bisnis perlu struktur konten lebih lengkap, FAQ, proses kerja, dan area layanan.</li>
+          <li>Custom Website dipakai saat kebutuhan halaman, fitur, atau integrasi sudah tidak cukup ditangani paket standar.</li>
         </ul>
       </section>
 
       <section className="split-section">
         <div>
           <p className="eyebrow">Biaya tahunan</p>
-          <h2>Perpanjangan menjaga domain, hosting, SSL, backup, sistem dasar, dan Asta Assist tetap berjalan.</h2>
+          <h2>Perpanjangan menjaga domain, hosting, SSL, backup, dan sistem dasar tetap berjalan.</h2>
         </div>
         <ul>
           {serviceNotes.annualRenewalCovers.map((item) => (
@@ -101,8 +101,8 @@ export default function PricingPage() {
 
       <section className="split-section dark-section compact">
         <div>
-          <p className="eyebrow">Batas AI</p>
-          <h2>Asta Assist memiliki batas penggunaan yang tertulis sejak awal.</h2>
+          <p className="eyebrow">Catatan dukungan</p>
+          <h2>Dukungan teknis dijelaskan sejak awal supaya tidak ada ekspektasi yang kabur.</h2>
         </div>
         <ul>
           {serviceNotes.aiUsage.map((item) => (
@@ -113,7 +113,7 @@ export default function PricingPage() {
 
       <section className="final-cta">
         <h2>Belum yakin paket mana yang paling masuk akal?</h2>
-        <p>Ceritakan kebutuhan dan anggaran awalmu lewat WhatsApp.</p>
+        <p>Ceritakan jenis bisnis, kebutuhan halaman, dan kisaran anggaran awal lewat WhatsApp.</p>
         <a className="button button-dark" href={getWhatsAppUrl()}>
           Konsultasikan Website
         </a>
