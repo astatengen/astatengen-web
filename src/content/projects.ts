@@ -62,7 +62,7 @@ export const projects: PortfolioProject[] = [
     label: "Studi Konsep Internal",
     projectType: "Studi konsep website Sector One",
     industry: "Kuliner rumahan",
-    service: "Starter Page",
+    service: "One Page Starter",
     year: "2026",
     liveUrl: "https://anekajajanan.vercel.app/",
     summary:
@@ -117,7 +117,7 @@ export const projects: PortfolioProject[] = [
     label: "Studi Konsep Internal",
     projectType: "Studi konsep website Sector One",
     industry: "Barbershop",
-    service: "Starter Page",
+    service: "One Page Starter",
     year: "2026",
     summary:
       "Website barbershop yang menampilkan menu layanan, kisaran harga, jam buka, lokasi, dan tombol booking cepat.",
@@ -171,7 +171,7 @@ export const projects: PortfolioProject[] = [
     label: "Studi Konsep Internal",
     projectType: "Studi konsep website Sector One",
     industry: "Klinik kecantikan",
-    service: "Business Profile",
+    service: "Business Plus",
     year: "2026",
     summary:
       "Website klinik kecantikan yang menyusun treatment, edukasi singkat, alur konsultasi, dan pendaftaran WhatsApp.",
@@ -225,7 +225,7 @@ export const projects: PortfolioProject[] = [
     label: "Studi Konsep Internal",
     projectType: "Studi konsep website Sector One",
     industry: "Bengkel otomotif",
-    service: "Starter Page",
+    service: "One Page Starter",
     year: "2026",
     summary:
       "Website bengkel yang menampilkan jenis servis, estimasi pengerjaan, lokasi, dan tombol kontak darurat.",

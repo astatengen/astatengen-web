@@ -10,9 +10,17 @@ import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Harga",
-  description: "Daftar harga website Sector One mulai Rp750.000, termasuk biaya tahunan, revisi, garansi, dan dukungan teknis.",
+  description: "Daftar harga pembuatan website Sector One mulai Rp199.000, transparan tanpa biaya tersembunyi.",
   path: "/harga",
 });
+
+const additionalCosts = [
+  { item: "Domain pribadi (.com/.id)", cost: "Menyesuaikan penyedia domain" },
+  { item: "Halaman tambahan", cost: "Mulai Rp150.000 / halaman" },
+  { item: "Revisi tambahan di luar batas paket", cost: "Mulai Rp50.000" },
+  { item: "Input konten tambahan", cost: "Mulai Rp50.000" },
+  { item: "Fitur custom (katalog, booking, dll)", cost: "Dihitung sesuai kebutuhan" },
+];
 
 export default function PricingPage() {
   return (
@@ -31,26 +39,28 @@ export default function PricingPage() {
             { href: "/harga", label: "Harga" },
           ]}
         />
-        <p className="eyebrow">Harga</p>
-        <h1>Harga dibuat bertahap agar bisnis bisa mulai dari kebutuhan utama.</h1>
+        <p className="eyebrow">Harga Layanan</p>
+        <h1>Harga transparan, dibuat bertahap sesuai skala bisnismu.</h1>
         <p>
-          Tidak semua bisnis perlu website besar sejak awal. Pilih paket yang cukup untuk kebutuhan sekarang,
-          lalu kembangkan saat informasi, cabang, atau fitur bisnis mulai bertambah.
+          Mulai dari halaman sederhana Rp199.000 hingga website kustom. Pilih paket yang sesuai dengan kebutuhan usahamu saat ini.
         </p>
       </section>
 
       <section className="pricing-table-section" aria-label="Tabel harga layanan">
         <div className="pricing-table">
           {services.map((service) => (
-            <article key={service.slug} className="pricing-row">
+            <article key={service.slug} className={`pricing-row ${service.slug === "business-profile" ? "highlighted" : ""}`}>
               <div>
-                <h2>{service.name}</h2>
+                <h2>
+                  {service.name}
+                  {service.slug === "business-profile" ? <span className="recommended-badge">Paling Direkomendasikan</span> : null}
+                </h2>
                 <p>{service.summary}</p>
               </div>
               <dl>
                 <div>
-                  <dt>Harga final</dt>
-                  <dd>{service.price}</dd>
+                  <dt>Harga</dt>
+                  <dd className="price-tag">{service.price}</dd>
                 </div>
                 <div>
                   <dt>Estimasi</dt>
@@ -69,7 +79,11 @@ export default function PricingPage() {
                   <dd>{service.warranty}</dd>
                 </div>
               </dl>
-              <Link href={`/layanan/${service.slug}`}>Detail paket</Link>
+              <div className="pricing-actions">
+                <Link href={`/layanan/${service.slug}`} className="button button-ghost">
+                  Detail Paket
+                </Link>
+              </div>
             </article>
           ))}
         </div>
@@ -77,19 +91,40 @@ export default function PricingPage() {
 
       <section className="split-section">
         <div>
-          <p className="eyebrow">Harga dan kualitas</p>
-          <h2>Harga mengikuti kedalaman konten dan kompleksitas pengerjaan.</h2>
+          <p className="eyebrow">Biaya Tambahan</p>
+          <h2>Layanan tambahan di luar lingkup paket dasar.</h2>
+          <p>Daftar biaya tambahan untuk kebutuhan pengembangan lebih lanjut secara transparan.</p>
         </div>
-        <ul>
-          <li>Starter Page cocok untuk usaha yang baru perlu tampil online dengan satu halaman sederhana.</li>
-          <li>Business Profile cocok ketika bisnis perlu struktur konten lebih lengkap, FAQ, proses kerja, dan area layanan.</li>
-          <li>Custom Website dipakai saat kebutuhan halaman, fitur, atau integrasi sudah tidak cukup ditangani paket standar.</li>
-        </ul>
+        <div className="additional-costs-card">
+          <ul className="costs-list">
+            {additionalCosts.map((costItem, idx) => (
+              <li key={idx} className="cost-row">
+                <span>{costItem.item}</span>
+                <strong>{costItem.cost}</strong>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       <section className="split-section">
         <div>
-          <p className="eyebrow">Biaya tahunan</p>
+          <p className="eyebrow">Kesesuaian Paket</p>
+          <h2>Pilih paket yang paling pas untuk target bisnismu.</h2>
+        </div>
+        <div className="package-recommendation-list">
+          <ul>
+            <li><strong>One Page Starter</strong>: Sangat cocok untuk usaha mikro yang baru mulai tampil online dengan biaya minimal.</li>
+            <li><strong>Business Profile</strong>: Pilihan terbaik untuk usaha lokal (laundry, barbershop, bengkel) yang ingin menampilkan detail paket, FAQ, dan wilayah operasional.</li>
+            <li><strong>Business Plus</strong>: Tepat untuk profil usaha berkembang yang ingin informasi layanannya terbagi rapi ke beberapa halaman terpisah.</li>
+            <li><strong>Custom Website</strong>: Untuk bisnis dengan kebutuhan modul khusus seperti pemesanan, filter katalog produk, atau integrasi spesifik.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="split-section">
+        <div>
+          <p className="eyebrow">Biaya Tahunan</p>
           <h2>Perpanjangan menjaga domain, hosting, SSL, backup, dan sistem dasar tetap berjalan.</h2>
         </div>
         <ul>
@@ -101,8 +136,8 @@ export default function PricingPage() {
 
       <section className="split-section dark-section compact">
         <div>
-          <p className="eyebrow">Catatan dukungan</p>
-          <h2>Dukungan teknis dijelaskan sejak awal supaya tidak ada ekspektasi yang kabur.</h2>
+          <p className="eyebrow">Ketentuan Kerja</p>
+          <h2>Dukungan teknis dan komitmen rilis ditulis secara jujur sejak awal.</h2>
         </div>
         <ul>
           {serviceNotes.aiUsage.map((item) => (
@@ -112,8 +147,8 @@ export default function PricingPage() {
       </section>
 
       <section className="final-cta">
-        <h2>Belum yakin paket mana yang paling masuk akal?</h2>
-        <p>Ceritakan jenis bisnis, kebutuhan halaman, dan kisaran anggaran awal lewat WhatsApp.</p>
+        <h2>Belum yakin paket mana yang paling pas?</h2>
+        <p>Hubungi Sector One di WhatsApp untuk konsultasi awal gratis mengenai kebutuhan websitemu.</p>
         <a className="button button-dark" href={getWhatsAppUrl()}>
           Konsultasikan Website
         </a>

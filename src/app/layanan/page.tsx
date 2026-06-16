@@ -31,11 +31,9 @@ export default function ServicesPage() {
             { href: "/layanan", label: "Layanan" },
           ]}
         />
-        <p className="eyebrow">Layanan</p>
-        <h1>Paket website dengan ruang lingkup yang jelas.</h1>
+        <h1>Pilih paket website sesuai kebutuhan bisnismu.</h1>
         <p>
-          Mulai dari halaman satu halaman untuk profil usaha, sampai website kustom untuk bisnis dengan konten dan alur yang lebih kompleks.
-          Setiap paket ditulis dengan batas kerja agar biaya, revisi, dan ekspektasi lebih mudah dikendalikan.
+          Mulai dari halaman sederhana Rp199.000 sampai website custom untuk kebutuhan yang lebih spesifik.
         </p>
       </section>
 

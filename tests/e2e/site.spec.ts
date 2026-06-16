@@ -3,8 +3,9 @@ import { expect, test } from "@playwright/test";
 const routes = [
   "/",
   "/layanan",
-  "/layanan/starter-page",
+  "/layanan/one-page-starter",
   "/layanan/business-profile",
+  "/layanan/business-plus",
   "/layanan/custom-website",
   "/harga",
   "/proses",
@@ -49,6 +50,7 @@ test.describe("Sector One v1", () => {
     expect(sitemap.ok()).toBeTruthy();
     const sitemapText = await sitemap.text();
     expect(sitemapText).toContain("/layanan/custom-website");
+    expect(sitemapText).toContain("/layanan/one-page-starter");
     expect(sitemapText).toContain("/proyek/aneka-jajanan-mutiara");
     expect(sitemapText).toContain("/proyek/satu-cukur-barbershop");
     expect(sitemapText).toContain("/proyek/ruang-rapi-laundry");
@@ -57,9 +59,10 @@ test.describe("Sector One v1", () => {
 
   test("home and portfolio communicate the entry package and live projects", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByRole("heading", { name: /Website bisnis yang rapi/i }).first()).toBeVisible();
-    await expect(page.getByRole("link", { name: "Konsultasi via WhatsApp" }).first()).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Starter Page" }).first()).toBeVisible();
+    await expect(page.getByRole("heading", { name: /Website sederhana untuk bisnismu/i }).first()).toBeVisible();
+    await expect(page.getByRole("link", { name: "Buat Website Rp199.000" }).first()).toBeVisible();
+    await expect(page.getByText("Mulai Rp199.000").first()).toBeVisible();
+    await expect(page.getByRole("heading", { name: "One Page Starter" }).first()).toBeVisible();
     await expect(page.getByRole("heading", { name: "Business Profile" }).first()).toBeVisible();
 
     await page.goto("/proyek/satu-cukur-barbershop");
@@ -83,14 +86,14 @@ test.describe("Sector One v1", () => {
     await page.getByRole("button", { name: "Buka WhatsApp" }).click();
     await expect(page.getByText("Persetujuan Kebijakan Privasi wajib dicentang.")).toBeVisible();
 
-    await page.getByLabel("Nama *").fill("Budi");
-    await page.getByLabel("Nama bisnis *").fill("Contoh Usaha");
+    await page.getByLabel("Nama Lengkap *").fill("Budi");
+    await page.getByLabel("Nama Bisnis *").fill("Contoh Usaha");
+    await page.getByLabel("Jenis Usaha *").fill("Kuliner");
     await page.getByLabel("Nomor WhatsApp *").fill("081234567890");
-    await page.getByLabel("Jenis bisnis").fill("Kuliner");
-    await page.getByLabel("Layanan yang diminati *").selectOption("Business Profile");
-    await page.getByLabel("Kisaran anggaran *").selectOption("Rp1.800.000 - Business Profile");
-    await page.getByLabel("Target waktu").fill("Bulan depan");
-    await page.getByLabel("Kebutuhan website singkat *").fill("Butuh landing page untuk promosi menu baru.");
+    await page.getByLabel("Lokasi Bisnis (Kota) *").fill("Semarang");
+    await page.getByLabel("Paket yang diminati *").selectOption("Business Profile — Rp699.000");
+    await page.getByLabel("Target pengerjaan").fill("Bulan depan");
+    await page.getByLabel("Kebutuhan singkat *").fill("Butuh landing page untuk promosi menu baru.");
     await page.getByLabel(/Saya sudah membaca/).check();
 
     const popupPromise = page.waitForEvent("popup");

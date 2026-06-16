@@ -34,7 +34,6 @@ export function Footer() {
           <h3>Legal</h3>
           <Link href="/kebijakan-privasi">Kebijakan Privasi</Link>
           <Link href="/syarat-layanan">Syarat Layanan</Link>
-          <p>Media sosial akan ditambahkan setelah kanal resmi siap dipublikasikan.</p>
         </div>
       </div>
 

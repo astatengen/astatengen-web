@@ -3,18 +3,40 @@ import Image from "next/image";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
-import { mediaAssets } from "@/content/media";
 import { getWhatsAppUrl, siteConfig } from "@/content/site";
 import { breadcrumbJsonLd, organizationJsonLd } from "@/lib/json-ld";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
   title: "Tentang",
-  description: "Sector One adalah studio pembuatan website dari Semarang yang didirikan dan dijalankan oleh Achmad Roychan.",
+  description: "Sector One adalah studio website independen dari Semarang yang membantu bisnis lokal punya website sederhana, rapi, dan mudah dihubungi.",
   path: "/tentang",
 });
 
 const founder = siteConfig.founders[0];
+
+const values = [
+  {
+    title: "Jelas",
+    body: "Setiap paket punya batas pekerjaan, estimasi, dan revisi yang ditulis sejak awal.",
+  },
+  {
+    title: "Rapi",
+    body: "Informasi bisnis disusun agar mudah dibaca, bukan sekadar ditempel ke halaman.",
+  },
+  {
+    title: "Cepat",
+    body: "Paket sederhana dikerjakan dengan template yang sudah disiapkan agar bisa selesai lebih cepat setelah materi lengkap.",
+  },
+  {
+    title: "Jujur",
+    body: "Tidak memakai klaim palsu, testimoni palsu, dan statistik yang belum terbukti.",
+  },
+  {
+    title: "Terjangkau",
+    body: "Harga dibuat ramah untuk bisnis kecil yang baru mulai membangun kehadiran online.",
+  },
+];
 
 export default function AboutPage() {
   return (
@@ -34,11 +56,24 @@ export default function AboutPage() {
           ]}
         />
         <p className="eyebrow">Tentang</p>
-        <h1>Studio kecil dari Semarang yang dikelola langsung oleh founder.</h1>
+        <h1>Studio website independen dari Semarang.</h1>
         <p>
-          Sector One dijalankan oleh Achmad Roychan untuk membantu usaha lokal punya website yang jelas,
-          mudah dibaca, dan tidak dibangun dari klaim berlebihan.
+          Sector One membantu bisnis lokal punya website sederhana, rapi, dan mudah dihubungi.
         </p>
+      </section>
+
+      <section className="about-intro-section">
+        <div className="about-intro-grid">
+          <h2>Fokus pada apa yang benar-benar dibutuhkan usaha kecil.</h2>
+          <div>
+            <p>
+              Kami fokus pada hal yang paling dibutuhkan usaha kecil: informasi layanan yang jelas, tampilan yang enak dibaca dari HP, tombol WhatsApp yang mudah ditemukan, dan proses pengerjaan yang tidak dibuat rumit.
+            </p>
+            <p>
+              Setiap proyek dimulai dari merapikan informasi bisnis terlebih dahulu. Setelah itu, informasi tersebut disusun menjadi struktur halaman, copy singkat, tampilan responsif, dan website live yang siap dibagikan ke calon pelanggan.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section className="founder-section">
@@ -53,50 +88,26 @@ export default function AboutPage() {
         </article>
       </section>
 
-      <section className="split-section dark-section">
-        <div>
-          <p className="eyebrow">Cara berpikir</p>
-          <h2>Website harus membantu bisnis menjelaskan dirinya dengan tenang.</h2>
-        </div>
-        <p>
-          Sector One tidak menjual kesan besar yang dibuat-buat. Fokusnya adalah struktur informasi,
-          tampilan yang rapi, batas kerja yang tertulis, dan jalur konsultasi yang langsung menuju WhatsApp.
-        </p>
-      </section>
-
       <section className="values-section">
-        {["Kejelasan", "Ketelitian", "Kejujuran", "Tanggung jawab", "Desain sesuai kebutuhan"].map((value) => (
-          <article key={value}>
-            <h2>{value}</h2>
-            <p>
-              {value === "Kejujuran"
-                ? "Tidak ada klaim klien, testimoni, kantor, atau hasil bisnis yang belum bisa dibuktikan."
-                : "Nilai ini diterapkan lewat batas paket, struktur kerja, dan komunikasi yang ditulis sejak awal."}
-            </p>
-          </article>
-        ))}
-      </section>
-
-      <section className="media-governance">
-        <div>
-          <p className="eyebrow">Aset yang disetujui</p>
-          <h2>Website v1 hanya memakai aset yang tercatat.</h2>
+        <div className="section-heading">
+          <p className="eyebrow">Nilai Kerja</p>
+          <h2>Cara kami bekerja dan melayani klien.</h2>
         </div>
-        <ul>
-          {mediaAssets.map((asset) => (
-            <li key={asset.id}>
-              <strong>{asset.id}</strong>
-              <span>{asset.licenseType}</span>
-            </li>
+        <div className="values-grid">
+          {values.map((value) => (
+            <article key={value.title} className="value-card">
+              <h3>{value.title}</h3>
+              <p>{value.body}</p>
+            </article>
           ))}
-        </ul>
+        </div>
       </section>
 
       <section className="final-cta">
         <h2>Ingin mulai dari percakapan yang jelas?</h2>
-        <p>Ceritakan kebutuhan bisnis, anggaran, dan target waktu lewat WhatsApp.</p>
+        <p>Hubungi Sector One di WhatsApp untuk mendiskusikan kebutuhan website usahamu.</p>
         <a className="button button-dark" href={getWhatsAppUrl()}>
-          Konsultasikan Website
+          Hubungi Sector One
         </a>
       </section>
     </>

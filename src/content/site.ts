@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     "Sector One membantu bisnis lokal mengubah informasi layanan, harga, lokasi, dan alur kontak menjadi website yang rapi, jelas, dan siap dibagikan ke calon pelanggan.",
   location: "Semarang, Jawa Tengah, Indonesia",
-  email: "ggbanget2023@gmail.com",
+  email: "sectorone.id@gmail.com",
   whatsappDisplay: "+62 878-1627-0140",
   whatsappNumber: "6287816270140",
   hours:

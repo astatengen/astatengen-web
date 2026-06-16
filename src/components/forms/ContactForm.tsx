@@ -1,16 +1,18 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
-
-import { services } from "@/content/services";
+import { FormEvent, useState } from "react";
 import { getWhatsAppUrl } from "@/content/site";
 
-type Errors = Partial<Record<"name" | "business" | "whatsapp" | "service" | "budget" | "need" | "privacy", string>>;
+type Errors = Partial<Record<
+  "name" | "business" | "businessType" | "whatsapp" | "location" | "service" | "need" | "privacy",
+  string
+>>;
 
-const budgetOptions = [
-  "Rp750.000 - Starter Page",
-  "Rp1.800.000 - Business Profile",
-  "Mulai Rp3.500.000 - Custom Website",
+const packageOptions = [
+  "One Page Starter — Rp199.000",
+  "Business Profile — Rp699.000",
+  "Business Plus — Rp1.499.000",
+  "Custom Website — mulai Rp2.500.000",
   "Belum yakin, ingin diarahkan",
 ];
 
@@ -18,17 +20,16 @@ export function ContactForm() {
   const [errors, setErrors] = useState<Errors>({});
   const [notice, setNotice] = useState("");
 
-  const serviceOptions = useMemo(() => services.map((service) => service.name), []);
-
   function validate(formData: FormData) {
     const nextErrors: Errors = {};
 
     if (!String(formData.get("name") ?? "").trim()) nextErrors.name = "Nama wajib diisi.";
     if (!String(formData.get("business") ?? "").trim()) nextErrors.business = "Nama bisnis wajib diisi.";
+    if (!String(formData.get("businessType") ?? "").trim()) nextErrors.businessType = "Jenis usaha wajib diisi.";
     if (!String(formData.get("whatsapp") ?? "").trim()) nextErrors.whatsapp = "Nomor WhatsApp wajib diisi.";
-    if (!String(formData.get("service") ?? "").trim()) nextErrors.service = "Pilih layanan yang diminati.";
-    if (!String(formData.get("budget") ?? "").trim()) nextErrors.budget = "Pilih kisaran anggaran.";
-    if (!String(formData.get("need") ?? "").trim()) nextErrors.need = "Ceritakan kebutuhan websitemu secara singkat.";
+    if (!String(formData.get("location") ?? "").trim()) nextErrors.location = "Lokasi wajib diisi.";
+    if (!String(formData.get("service") ?? "").trim()) nextErrors.service = "Pilih paket yang diminati.";
+    if (!String(formData.get("need") ?? "").trim()) nextErrors.need = "Ceritakan kebutuhan singkat website Anda.";
     if (formData.get("privacy") !== "on") {
       nextErrors.privacy = "Persetujuan Kebijakan Privasi wajib dicentang.";
     }
@@ -51,45 +52,42 @@ export function ContactForm() {
 
     const message = [
       "Halo Sector One, saya ingin konsultasi website.",
-      "",
-      `Nama: ${formData.get("name")}`,
       `Nama bisnis: ${formData.get("business")}`,
-      `Nomor WhatsApp: ${formData.get("whatsapp")}`,
-      `Jenis bisnis: ${formData.get("businessType") || "-"}`,
-      `Layanan diminati: ${formData.get("service")}`,
-      `Kisaran anggaran: ${formData.get("budget")}`,
-      `Target waktu: ${formData.get("timeline") || "-"}`,
-      `Referensi: ${formData.get("reference") || "-"}`,
+      `Jenis usaha: ${formData.get("businessType")}`,
+      `Lokasi: ${formData.get("location")}`,
+      `Paket yang diminati: ${formData.get("service")}`,
+      `Materi yang sudah tersedia: ${formData.get("materials") || "-"}`,
+      `Target pengerjaan: ${formData.get("timeline") || "-"}`,
       "",
-      `Kebutuhan website: ${formData.get("need")}`,
-      "",
-      "Saya sudah membaca dan menyetujui Kebijakan Privasi Sector One untuk konsultasi awal.",
+      `Kebutuhan singkat: ${formData.get("need")}`,
     ].join("\n");
 
-    setNotice("WhatsApp akan terbuka dengan ringkasan kebutuhan. Pesan belum dikirim sampai kamu menekan kirim di WhatsApp.");
+    setNotice("WhatsApp akan terbuka dengan ringkasan kebutuhan. Pesan belum terkirim sampai Anda menekan kirim di WhatsApp.");
     window.open(getWhatsAppUrl(message), "_blank", "noopener,noreferrer");
   }
 
   return (
     <form className="contact-form" noValidate onSubmit={handleSubmit}>
       <div className="field-grid">
-        <Field label="Nama" name="name" error={errors.name} required />
-        <Field label="Nama bisnis" name="business" error={errors.business} required />
-        <Field label="Nomor WhatsApp" name="whatsapp" error={errors.whatsapp} required />
-        <Field label="Jenis bisnis" name="businessType" />
+        <Field label="Nama Lengkap" name="name" error={errors.name} required />
+        <Field label="Nama Bisnis" name="business" error={errors.business} required />
+        <Field label="Jenis Usaha" name="businessType" error={errors.businessType} required />
+        <Field label="Nomor WhatsApp" name="whatsapp" error={errors.whatsapp} placeholder="contoh: 08123456789" required />
       </div>
 
       <div className="field-grid">
-        <Select label="Layanan yang diminati" name="service" options={serviceOptions} error={errors.service} required />
-        <Select label="Kisaran anggaran" name="budget" options={budgetOptions} error={errors.budget} required />
+        <Field label="Lokasi Bisnis (Kota)" name="location" error={errors.location} placeholder="contoh: Semarang" required />
+        <Select label="Paket yang diminati" name="service" options={packageOptions} error={errors.service} required />
       </div>
 
-      <Field label="Target waktu" name="timeline" />
-      <Field label="Referensi website bila ada" name="reference" />
+      <div className="field-grid">
+        <Field label="Materi yang sudah tersedia (contoh: logo, foto produk, daftar harga, dll)" name="materials" placeholder="contoh: logo & daftar harga sudah ada" />
+        <Field label="Target pengerjaan" name="timeline" placeholder="contoh: 1 minggu" />
+      </div>
 
       <label className="field">
-        <span>Kebutuhan website singkat *</span>
-        <textarea name="need" rows={6} aria-invalid={Boolean(errors.need)} aria-describedby={errors.need ? "need-error" : undefined} />
+        <span>Kebutuhan singkat *</span>
+        <textarea name="need" rows={4} aria-invalid={Boolean(errors.need)} aria-describedby={errors.need ? "need-error" : undefined} placeholder="Jelaskan secara singkat apa saja yang ingin ditampilkan di website Anda..." />
         {errors.need ? <small id="need-error">{errors.need}</small> : null}
       </label>
 
@@ -114,11 +112,13 @@ function Field({
   label,
   name,
   error,
+  placeholder,
   required = false,
 }: {
   label: string;
   name: string;
   error?: string;
+  placeholder?: string;
   required?: boolean;
 }) {
   const errorId = `${name}-error`;
@@ -129,7 +129,7 @@ function Field({
         {label}
         {required ? " *" : ""}
       </span>
-      <input name={name} aria-invalid={Boolean(error)} aria-describedby={error ? errorId : undefined} />
+      <input name={name} placeholder={placeholder} aria-invalid={Boolean(error)} aria-describedby={error ? errorId : undefined} />
       {error ? <small id={errorId}>{error}</small> : null}
     </label>
   );

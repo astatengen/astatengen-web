@@ -94,11 +94,12 @@ export default function ProcessPage() {
       <section className="split-section dark-section compact">
         <div>
           <p className="eyebrow">Pembayaran dan peluncuran</p>
-          <h2>Pekerjaan dimulai setelah pembayaran awal, brief, akses, materi utama, dan ruang lingkup disepakati.</h2>
+          <h2>Pekerjaan dimulai setelah pembayaran, brief, akses, materi utama, dan ruang lingkup disepakati.</h2>
         </div>
         <p>
           Kecuali dinyatakan berbeda dalam penawaran, pembayaran awal sebesar 50% dilakukan sebelum pengerjaan dan pembayaran akhir
-          sebesar 50% dilakukan sebelum peluncuran final.
+          sebesar 50% dilakukan sebelum peluncuran final. Untuk paket kecil seperti One Page Starter, pembayaran dapat diminta penuh di awal
+          apabila tertulis di penawaran.
         </p>
       </section>
 
